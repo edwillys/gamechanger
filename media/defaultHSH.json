@@ -1,0 +1,362 @@
+{
+    "id": "4",
+    "config": "01045447433132333435312e303005",
+    "memory": "00312e3030312e3030",
+    "behavior": "020202030100000a0a010f01000100",
+    "sb_scheme": "104",
+    "sb_bank_a": "320",
+    "sb_bank_b": "319",
+    "sb_bank_z": "318",
+    "sb_id": [
+        "104",
+        "320",
+        "319",
+        "318"
+    ],
+    "p_id": [
+        {
+            "id": "76",
+            "scheme_id": "4",
+            "bank_index": "0",
+            "preset_index": "0",
+            "preset_id": "13",
+            "preset_code": "0300000000111263ffffffffffffffff"
+        },
+        {
+            "id": "77",
+            "scheme_id": "4",
+            "bank_index": "0",
+            "preset_index": "1",
+            "preset_id": "41",
+            "preset_code": "110000000061ffffffffffff0a6bffff"
+        },
+        {
+            "id": "78",
+            "scheme_id": "4",
+            "bank_index": "0",
+            "preset_index": "2",
+            "preset_id": "287",
+            "preset_code": "1b00000000111263ffff08494a6bffff"
+        },
+        {
+            "id": "79",
+            "scheme_id": "4",
+            "bank_index": "0",
+            "preset_index": "3",
+            "preset_id": "73",
+            "preset_code": "0a000000ffff0263ffff0869ffffffff"
+        },
+        {
+            "id": "80",
+            "scheme_id": "4",
+            "bank_index": "0",
+            "preset_index": "4",
+            "preset_id": "157",
+            "preset_code": "18000000ffffffffffff08494a6bffff"
+        },
+        {
+            "id": "81",
+            "scheme_id": "4",
+            "bank_index": "1",
+            "preset_index": "0",
+            "preset_id": "3",
+            "preset_code": "02000000ffff0263ffffffffffffffff"
+        },
+        {
+            "id": "82",
+            "scheme_id": "4",
+            "bank_index": "1",
+            "preset_index": "1",
+            "preset_id": "65",
+            "preset_code": "06000000ffff02630465ffffffffffff"
+        },
+        {
+            "id": "83",
+            "scheme_id": "4",
+            "bank_index": "1",
+            "preset_index": "2",
+            "preset_id": "5",
+            "preset_code": "04000000ffffffff0465ffffffffffff"
+        },
+        {
+            "id": "84",
+            "scheme_id": "4",
+            "bank_index": "1",
+            "preset_index": "3",
+            "preset_id": "121",
+            "preset_code": "14000000ffffffff0465ffff0a6bffff"
+        },
+        {
+            "id": "85",
+            "scheme_id": "4",
+            "bank_index": "1",
+            "preset_index": "4",
+            "preset_id": "9",
+            "preset_code": "10000000ffffffffffffffff0a6bffff"
+        },
+        {
+            "id": "86",
+            "scheme_id": "4",
+            "bank_index": "2",
+            "preset_index": "0",
+            "preset_id": "1",
+            "preset_code": "010000000061ffffffffffffffffffff"
+        },
+        {
+            "id": "87",
+            "scheme_id": "4",
+            "bank_index": "2",
+            "preset_index": "1",
+            "preset_id": "3",
+            "preset_code": "02000000ffff0263ffffffffffffffff"
+        },
+        {
+            "id": "88",
+            "scheme_id": "4",
+            "bank_index": "2",
+            "preset_index": "2",
+            "preset_id": "5",
+            "preset_code": "04000000ffffffff0465ffffffffffff"
+        },
+        {
+            "id": "89",
+            "scheme_id": "4",
+            "bank_index": "2",
+            "preset_index": "3",
+            "preset_id": "7",
+            "preset_code": "08000000ffffffffffff0869ffffffff"
+        },
+        {
+            "id": "90",
+            "scheme_id": "4",
+            "bank_index": "2",
+            "preset_index": "4",
+            "preset_id": "9",
+            "preset_code": "10000000ffffffffffffffff0a6bffff"
+        },
+        {
+            "id": "91",
+            "scheme_id": "4",
+            "bank_index": "2",
+            "preset_index": "5",
+            "preset_id": "13",
+            "preset_code": "0300000000111263ffffffffffffffff"
+        },
+        {
+            "id": "92",
+            "scheme_id": "4",
+            "bank_index": "2",
+            "preset_index": "6",
+            "preset_id": "17",
+            "preset_code": "0300000000610263ffffffffffffffff"
+        },
+        {
+            "id": "93",
+            "scheme_id": "4",
+            "bank_index": "2",
+            "preset_index": "7",
+            "preset_id": "41",
+            "preset_code": "110000000061ffffffffffff0a6bffff"
+        },
+        {
+            "id": "94",
+            "scheme_id": "4",
+            "bank_index": "2",
+            "preset_index": "8",
+            "preset_id": "65",
+            "preset_code": "06000000ffff02630465ffffffffffff"
+        },
+        {
+            "id": "95",
+            "scheme_id": "4",
+            "bank_index": "2",
+            "preset_index": "9",
+            "preset_id": "73",
+            "preset_code": "0a000000ffff0263ffff0869ffffffff"
+        },
+        {
+            "id": "96",
+            "scheme_id": "4",
+            "bank_index": "2",
+            "preset_index": "10",
+            "preset_id": "121",
+            "preset_code": "14000000ffffffff0465ffff0a6bffff"
+        },
+        {
+            "id": "97",
+            "scheme_id": "4",
+            "bank_index": "2",
+            "preset_index": "11",
+            "preset_id": "157",
+            "preset_code": "18000000ffffffffffff08494a6bffff"
+        },
+        {
+            "id": "98",
+            "scheme_id": "4",
+            "bank_index": "2",
+            "preset_index": "12",
+            "preset_id": "161",
+            "preset_code": "18000000ffffffffffff08690a6bffff"
+        },
+        {
+            "id": "99",
+            "scheme_id": "4",
+            "bank_index": "2",
+            "preset_index": "13",
+            "preset_id": "287",
+            "preset_code": "1b00000000111263ffff08494a6bffff"
+        },
+        {
+            "id": "100",
+            "scheme_id": "4",
+            "bank_index": "2",
+            "preset_index": "14",
+            "preset_id": "262",
+            "preset_code": "80000000ffffffffffffffffffffffff"
+        }
+    ],
+    "mi_co": [
+        {
+            "id": "61",
+            "scheme_id": "4",
+            "in_out": "in",
+            "order": "0",
+            "code": "01c00000"
+        },
+        {
+            "id": "62",
+            "scheme_id": "4",
+            "in_out": "in",
+            "order": "1",
+            "code": "02c00100"
+        },
+        {
+            "id": "63",
+            "scheme_id": "4",
+            "in_out": "in",
+            "order": "2",
+            "code": "03c00200"
+        },
+        {
+            "id": "64",
+            "scheme_id": "4",
+            "in_out": "in",
+            "order": "3",
+            "code": "04c00300"
+        },
+        {
+            "id": "65",
+            "scheme_id": "4",
+            "in_out": "in",
+            "order": "4",
+            "code": "05c00400"
+        },
+        {
+            "id": "66",
+            "scheme_id": "4",
+            "in_out": "in",
+            "order": "5",
+            "code": "06c00500"
+        },
+        {
+            "id": "67",
+            "scheme_id": "4",
+            "in_out": "in",
+            "order": "6",
+            "code": "07c00600"
+        },
+        {
+            "id": "68",
+            "scheme_id": "4",
+            "in_out": "in",
+            "order": "7",
+            "code": "0cc00700"
+        },
+        {
+            "id": "69",
+            "scheme_id": "4",
+            "in_out": "in",
+            "order": "8",
+            "code": "0dc00800"
+        },
+        {
+            "id": "70",
+            "scheme_id": "4",
+            "in_out": "in",
+            "order": "9",
+            "code": "0ec00900"
+        }
+    ],
+    "mo_co": [
+        {
+            "id": "71",
+            "scheme_id": "4",
+            "in_out": "out",
+            "order": "0",
+            "code": "04c00000"
+        },
+        {
+            "id": "72",
+            "scheme_id": "4",
+            "in_out": "out",
+            "order": "1",
+            "code": "05c00100"
+        },
+        {
+            "id": "73",
+            "scheme_id": "4",
+            "in_out": "out",
+            "order": "2",
+            "code": "06c00200"
+        },
+        {
+            "id": "74",
+            "scheme_id": "4",
+            "in_out": "out",
+            "order": "3",
+            "code": "07c00300"
+        },
+        {
+            "id": "75",
+            "scheme_id": "4",
+            "in_out": "out",
+            "order": "4",
+            "code": "08c00400"
+        },
+        {
+            "id": "76",
+            "scheme_id": "4",
+            "in_out": "out",
+            "order": "5",
+            "code": "09c00500"
+        },
+        {
+            "id": "77",
+            "scheme_id": "4",
+            "in_out": "out",
+            "order": "6",
+            "code": "0ac00600"
+        },
+        {
+            "id": "78",
+            "scheme_id": "4",
+            "in_out": "out",
+            "order": "7",
+            "code": "0bc00700"
+        },
+        {
+            "id": "79",
+            "scheme_id": "4",
+            "in_out": "out",
+            "order": "8",
+            "code": "0cc00800"
+        },
+        {
+            "id": "80",
+            "scheme_id": "4",
+            "in_out": "out",
+            "order": "9",
+            "code": "0dc00900"
+        }
+    ]
+}

@@ -1,0 +1,2696 @@
+#app_header {
+    background: url(../static/app_head_bg.png);
+    width: 950px;
+    height: 26px;
+    margin-left: 50px;
+    margin-top: 10px
+}
+
+#app_header_logo {
+    float: left;
+    width: 256px;
+    height: 18px;
+    padding: 4px 0 4px 25px
+}
+
+#app_header_login {
+    float: left;
+    width: 644px;
+    height: 26px;
+    text-align: right;
+    padding-right: 25px;
+    line-height: 26px
+}
+
+#app_footer {
+    background: url(../static/app_foot_bg.png);
+    width: 950px;
+    height: 26px;
+    margin-left: 50px
+}
+
+#app_footer_copy {
+    font-size: 8pt;
+    float: left;
+    padding-left: 25px;
+    width: 600px;
+    height: 26px;
+    line-height: 26px
+}
+
+#app_footer_logos {
+    float: left;
+    width: 300px;
+    height: 26px;
+    text-align: right;
+    line-height: 26px;
+    padding: 3px 25px 7px 0
+}
+
+#app_footer_logos img {
+    padding-left: 10px
+}
+
+#app_container {
+    height: 599px;
+    width: 1001px
+}
+
+#app_window {
+    background-image: url(../static/1.png);
+    float: left;
+    height: 595px;
+    width: 947px;
+    border: 2px solid #003f67;
+    border-left: 0;
+    position: relative
+}
+
+#app_tabs {
+    float: left;
+    height: 599px;
+    width: 52px
+}
+
+#app_tabs span {
+    background: url(../static/tabs_icons.png) 0 -297px;
+    height: 1px;
+    display: block;
+    width: 52px
+}
+
+.app_tab {
+    display: block;
+    height: 99px;
+    width: 52px;
+    margin-bottom: 1px
+}
+
+.tab_border {
+    background: url(../static/tabs_icons.png) 0 -297px
+}
+
+.tab_on {
+    background: url(../static/tabs_icons.png) 0 0
+}
+
+.tab_off {
+    background: url(../static/tabs_icons.png) 0 -99px;
+    cursor: pointer
+}
+
+.tab_off:hover {
+    background: url(../static/tabs_icons.png) 0 -198px
+}
+
+.tab1 {
+    background: url(../static/tabcons_icons.png) 0 0
+}
+
+.tab1:hover {
+    background: url(../static/tabcons_icons.png) 0 -99px
+}
+
+.tab2 {
+    background: url(../static/tabcons_icons.png) 0 -198px
+}
+
+.tab2:hover {
+    background: url(../static/tabcons_icons.png) 0 -297px
+}
+
+.tab3 {
+    background: url(../static/tabcons_icons.png) 0 -396px
+}
+
+.tab3:hover {
+    background: url(../static/tabcons_icons.png) 0 -495px
+}
+
+.tab4 {
+    background: url(../static/tabcons_icons.png) 0 -594px
+}
+
+.tab4:hover {
+    background: url(../static/tabcons_icons.png) 0 -693px
+}
+
+.tab5 {
+    background: url(../static/tabcons_icons.png) 0 -792px
+}
+
+.tab5:hover {
+    background: url(../static/tabcons_icons.png) 0 -891px
+}
+
+.tab6 {
+    background: url(../static/tabcons_icons.png) 0 -990px
+}
+
+.tab6:hover {
+    background: url(../static/tabcons_icons.png) 0 -1089px
+}
+
+.app_spacer {
+    float: left;
+    height: 100%;
+    width: 2px;
+    background-color: #032942;
+    border-left: 1px solid #003f67;
+    border-right: 1px solid #003f67
+}
+
+#app_library,#app_device_lg,#app_library_lg,.app_guitar {
+    position: relative;
+    float: left;
+    height: 595px;
+    width: 471px
+}
+
+.app_guitar {
+    background-image: url(../static/guitar.jpg)
+}
+
+.app_guitar_stallion {
+    background-image: url(../static/guitar_Stallion.jpeg);
+    float: left;
+    height: 100%;
+    width: 2px;
+    background-color: #032942;
+    border-left: 1px solid #003f67;
+    border-right: 1px solid #003f67
+}
+
+.app_library,#app_device_sm,#app_library_sm {
+    position: relative;
+    float: left;
+    height: 595px;
+    width: 348px
+}
+
+.em_close {
+    padding-right: 160px
+}
+
+.em_inst_type {
+    float: left;
+    height: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 12px 10px 0 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000;
+    border: none
+}
+
+.app_button {
+    float: left;
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    margin: 7px 10px 0 0;
+    width: 71px;
+    font-weight: bold
+}
+
+.app_button:hover {
+    color: #fff
+}
+
+.app_button img {
+    padding-top: 3px
+}
+
+.button_off {
+    cursor: pointer;
+    background: url(../static/button_icons.png) 0 -26px
+}
+
+.button_off:hover {
+    background: url(../static/button_icons.png) 0 0
+}
+
+.button_on {
+    background: url(../static/button_icons.png) 0 -78px
+}
+
+.button_on:hover {
+    background: url(../static/button_icons.png) 0 -52px
+}
+
+.button_disable {
+    background: url(../static/button_icons.png) 0 -104px;
+    pointer-events: none;
+    cursor: default
+}
+
+.app_help {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    z-index: 500
+}
+
+.app_help_visible {
+    display: block;
+    cursor: pointer;
+    background: url(../static/system_icons.png) 0 -22px;
+    height: 22px;
+    width: 22px
+}
+
+.app_help_hidden {
+    display: none
+}
+
+.app_help a:hover {
+    background: url(../static/system_icons.png) 0 0
+}
+
+.app_libnav {
+    height: 23px;
+    width: 59px;
+    background: url(../static/library_nav.png) 0 -105px
+}
+
+.app_libnav_hover {
+    background: url(../static/library_nav.png) 0 -35px
+}
+
+.app_libnav .right {
+    float: left;
+    height: 35px;
+    width: 23px
+}
+
+.app_libnav .back {
+    float: left;
+    height: 35px;
+    width: 36px;
+    background: url(../static/library_nav.png) 0 -70px
+}
+
+.app_libnav .back:hover {
+    background: url(../static/library_nav.png) 0 0
+}
+
+.app_libnav .forward {
+    height: 23px;
+    width: 23px
+}
+
+.app_libnav .history {
+    height: 12px;
+    width: 23px;
+    background: url(../static/library_nav.png) -36px -128px
+}
+
+.app_libnav .history:hover {
+    background: url(../static/library_nav.png) -36px -58px
+}
+
+.app_emulator {
+    width: 182px;
+    height: 26px;
+    display: table-cell;
+    line-height: 26px;
+    text-align: center;
+    background: url(../static/big_button_icons.png) 0 0;
+    margin: 10px
+}
+
+.app_emulator:hover {
+    color: #fff;
+    background: url(../static/big_button_icons.png) 0 -26px
+}
+
+.midi_sm {
+}
+
+.tree_lg .library_body,.tree_lg .device_body {
+    width: 451px
+}
+
+.tree_sm .library_body,.tree_sm .device_body {
+    width: 328px
+}
+
+.library_body,.device_body {
+    margin: 0 auto
+}
+
+.app_tree {
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: 10px
+}
+
+.app_tree_left {
+    float: left;
+    width: 225px;
+    margin-right: 1px
+}
+
+.app_tree_right {
+    float: right;
+    width: 225px
+}
+
+.app_tree .icon,.midi_tree .icon {
+    float: left;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold
+}
+
+.app_tree .node,.app_tree .children {
+    display: block;
+    float: left;
+    width: 100%
+}
+
+.app_tree .scheme,.app_tree .bank,.app_tree .preset {
+    z-index: 990
+}
+
+#Stallion .app_tree .preset {
+    z-index: 20
+}
+
+.row_bg,.row_bg2 {
+    height: 30px
+}
+
+.app_tree .scheme .row_bg,.app_tree .scheme .row_bg2,.midi_tree .midi_in .row_bg {
+    background: url(../static/bar_icons.png) 0 -120px #003f67
+}
+
+.app_tree .scheme .row_bg:hover,.midi_tree .midi_in .row_bg:hover {
+    background: url(../static/bar_icons.png) 0 -150px #003f67
+}
+
+.app_tree .bank .row_bg,.midi_tree .midi_out .row_bg {
+    background: url(../static/bar_icons.png) 0 -120px #014056
+}
+
+.app_tree .bank .row_bg:hover,.midi_tree .midi_out .row_bg:hover {
+    background: url(../static/bar_icons.png) 0 -150px #014056
+}
+
+.app_tree .preset .row_bg:hover,.midi_tree .midi_cmd .row_bg:hover {
+    background: url(../static/bar_icons.png) 0 -150px #363b43
+}
+
+.app_tree .preset .active,.app_tree .preset .active:hover {
+    background: url(../static/barbg_icons.png) 0 -150px #363b43
+}
+
+.app_tree .preset .audition,.app_tree .preset .audition:hover {
+    background: url(../static/barbg_icons.png) 0 -50px #363b43
+}
+
+.app_tree .collapsed {
+    display: none
+}
+
+.app_tree .expanded {
+    display: block
+}
+
+.app_tree .default_off {
+    display: block;
+    background: url(../static/bar_icons.png) -68px 0
+}
+
+.app_tree .default_off:hover {
+    display: block;
+    background: url(../static/bar_icons.png) -87px 0
+}
+
+.app_tree .default_on {
+    display: block;
+    background: url(../static/bar_icons.png) -106px 0
+}
+
+.app_tree .default_on:hover {
+    display: block;
+    background: url(../static/bar_icons.png) -125px 0
+}
+
+.app_tree .audition_on {
+    display: block;
+    background: url(../static/bar_icons.png) -30px -90px
+}
+
+.app_tree .audition_off {
+    display: none
+}
+
+.app_tree .name:hover .collapse {
+    background: url(../static/bar_icons.png) -25px -100px
+}
+
+.app_tree .name .collapse {
+    background: url(../static/bar_icons.png) -25px -150px
+}
+
+.app_tree .name:hover .expand {
+    background: url(../static/bar_icons.png) -25px -125px
+}
+
+.app_tree .name .expand {
+    background: url(../static/bar_icons.png) -25px -175px
+}
+
+.app_tree .toolbar {
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.app_tree .name input.edit {
+    font-size: 12px;
+    width: 275px;
+    height: 25px;
+    line-height: 25px;
+    border: 0;
+    padding: 0;
+    margin: 0
+}
+
+.app_tree .toolbar .button {
+    float: left;
+    display: block;
+    width: 19px;
+    height: 30px
+}
+
+.app_tree .scheme .toolbar .save {
+    background: url(../static/bar_icons.png) -30px -60px #003f67
+}
+
+.app_tree .scheme .toolbar .trash {
+    background: url(../static/bar_icons.png) -30px -30px #003f67
+}
+
+.app_tree .scheme .toolbar .note {
+    background: url(../static/bar_icons.png) -30px 0 #003f67
+}
+
+.app_tree .scheme .toolbar .undo {
+    background: url(../static/bar_icons.png) -68px -60px #003f67
+}
+
+.app_tree .scheme .toolbar .save:hover {
+    background: url(../static/bar_icons.png) -49px -60px #003f67
+}
+
+.app_tree .scheme .toolbar .trash:hover {
+    background: url(../static/bar_icons.png) -49px -30px #003f67
+}
+
+.app_tree .scheme .toolbar .note:hover {
+    background: url(../static/bar_icons.png) -49px 0 #003f67
+}
+
+.app_tree .scheme .toolbar .undo:hover {
+    background: url(../static/bar_icons.png) -87px -60px #014056
+}
+
+.app_tree .bank .toolbar .save {
+    background: url(../static/bar_icons.png) -30px -60px #014056
+}
+
+.app_tree .bank .toolbar .trash {
+    background: url(../static/bar_icons.png) -30px -30px #014056
+}
+
+.app_tree .bank .toolbar .note {
+    background: url(../static/bar_icons.png) -30px 0 #014056
+}
+
+.app_tree .bank .toolbar .undo {
+    background: url(../static/bar_icons.png) -68px -60px #014056
+}
+
+.app_tree .bank .toolbar .save:hover {
+    background: url(../static/bar_icons.png) -49px -60px #014056
+}
+
+.app_tree .bank .toolbar .trash:hover {
+    background: url(../static/bar_icons.png) -49px -30px #014056
+}
+
+.app_tree .bank .toolbar .note:hover {
+    background: url(../static/bar_icons.png) -49px 0 #014056
+}
+
+.app_tree .bank .toolbar .undo:hover {
+    background: url(../static/bar_icons.png) -87px -60px #014056
+}
+
+.app_tree .preset .toolbar .save {
+    background: url(../static/bar_icons.png) -30px -60px #363b43
+}
+
+.app_tree .preset .toolbar .trash {
+    background: url(../static/bar_icons.png) -30px -30px #363b43
+}
+
+.app_tree .preset .toolbar .note {
+    background: url(../static/bar_icons.png) -30px 0 #363b43
+}
+
+.app_tree .preset .toolbar .undo {
+    background: url(../static/bar_icons.png) -68px -60px #363b43
+}
+
+.app_tree .preset .toolbar .save:hover {
+    background: url(../static/bar_icons.png) -49px -60px #363b43
+}
+
+.app_tree .preset .toolbar .trash:hover {
+    background: url(../static/bar_icons.png) -49px -30px #363b43
+}
+
+.app_tree .preset .toolbar .note:hover {
+    background: url(../static/bar_icons.png) -49px 0 #363b43
+}
+
+.app_tree .preset .toolbar .undo:hover {
+    background: url(../static/bar_icons.png) -87px -60px #014056
+}
+
+.app_tree .toolbar .buttons {
+    float: left;
+    display: block
+}
+
+.app_guitar .btns_left {
+    z-index: 500;
+    position: absolute;
+    left: 0;
+    padding-left: 10px
+}
+
+#app_device_header .btns_right {
+    margin-left: 158px;
+    float: left
+}
+
+#app_device_header .btns_right_midi {
+    margin-left: 445px;
+    float: left
+}
+
+.app_guitar .btns_right {
+    z-index: 500;
+    position: absolute;
+    right: 0
+}
+
+#app_guitar_left,#app_guitar_right {
+    height: 370px
+}
+
+#app_guitar_left {
+    width: 175px;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+#app_guitar_right {
+    width: 157px;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+#app_guitar_toggles {
+    float: left;
+    width: 100%;
+    height: 370px;
+    position: relative
+}
+
+.app_guitar_coils {
+    width: 139px;
+    height: 310px;
+    position: absolute;
+    left: 175px;
+    top: 60px;
+    margin: 0 auto
+}
+
+#app_guitar_grid {
+    float: left;
+    position: relative;
+    background: url(../static/2.png);
+    height: 201px;
+    width: 465px;
+    border: 1px solid #747474;
+    margin: 0 2px 2px;
+    padding-top: 20px
+}
+
+.app_pickup_space,.app_pickup_outer {
+    width: 138px;
+    height: 44px;
+    padding-top: 2px;
+    padding-left: 1px
+}
+
+.app_pickup_odd {
+    margin: 23px 0 23px 0
+}
+
+.app_pickup_outer {
+    background: url(../static/coil_icons.png) 0 -104px;
+    cursor: pointer
+}
+
+.app_pickup_outer:hover {
+    background: url(../static/coil_icons.png) 0 -58px
+}
+
+.app_piezo_outer,.app_humbucker,.app_pickup_outer,.app_pickup_space,.app_humbucker_space {
+    float: left;
+    clear: both
+}
+
+.app_piezo_outer {
+    width: 137px;
+    height: 26px;
+    background: url(../static/coil_icons.png) 0 -29px;
+    margin-bottom: 5px;
+    padding-left: 2px;
+    padding-top: 3px;
+    cursor: pointer
+}
+
+.app_piezo_outer:hover {
+    background: url(../static/coil_icons.png) 0 -0
+}
+
+.app_humbucker_space,.app_humbucker {
+    width: 138px;
+    height: 82px;
+    padding: 2px 0 0 1px;
+    margin: 4px 0 4px 0
+}
+
+.app_humbucker {
+    background: url(../static/coil_icons.png) 0 -234px;
+    cursor: pointer
+}
+
+.app_humbucker:hover {
+    background: url(../static/coil_icons.png) 0 -150px
+}
+
+.app_guitar_coils .app_pickupb_grey span,.app_guitar_coils .app_pickup_grey span {
+    margin-left: -15px;
+    line-height: 39px;
+    color: #555
+}
+
+.app_guitar_coils .app_pickupb_fwd span,.app_guitar_coils .app_pickupb_rvs span,.app_guitar_coils .app_pickup_fwd span,.app_guitar_coils .app_pickup_rvs span {
+    margin-left: -15px;
+    line-height: 39px;
+    color: #fff
+}
+
+.app_guitar_coils .app_pickupb_grey,.app_guitar_coils .app_pickupb_fwd,.app_guitar_coils .app_pickupb_rvs,.app_guitar_coils .app_pickup_grey,.app_guitar_coils .app_pickup_fwd,.app_guitar_coils .app_pickup_rvs {
+    width: 137px;
+    height: 39px
+}
+
+.app_guitar_coils .app_piezo_on,.app_guitar_coils .app_piezo_off {
+    width: 137px;
+    height: 24px
+}
+
+.app_guitar_coils .app_piezo_on {
+    background: url(../static/coil_icons.png) 0 -552px
+}
+
+.app_guitar_coils .app_piezo_off {
+    background: url(../static/coil_icons.png) 0 -576px
+}
+
+.app_guitar_coils .app_pickup_grey {
+    background: url(../static/coil_icons.png) 0 -318px
+}
+
+.app_guitar_coils .app_pickup_fwd {
+    background: url(../static/coil_icons.png) 0 -357px
+}
+
+.app_guitar_coils .app_pickup_rvs {
+    background: url(../static/coil_icons.png) 0 -396px
+}
+
+.app_guitar_coils .app_pickupb_grey {
+    background: url(../static/coil_icons.png) 0 -435px
+}
+
+.app_guitar_coils .app_pickupb_fwd {
+    background: url(../static/coil_icons.png) 0 -474px
+}
+
+.app_guitar_coils .app_pickupb_rvs {
+    background: url(../static/coil_icons.png) 0 -513px
+}
+
+.app_guitar_double .one {
+    float: left;
+    clear: both;
+    height: 295px
+}
+
+.app_guitar_double .two {
+    float: left;
+    clear: both;
+    height: 295px
+}
+
+.app_guitar_double .one .app_spacer {
+    float: right
+}
+
+.app_guitar_double .two .app_spacer {
+    float: left
+}
+
+.app_guitar_double .left,.app_guitar_double .right,.app_guitar_double .h {
+    float: left
+}
+
+.app_guitar_double .left {
+    width: 4px;
+    height: 4px;
+    background: url(../static/mini_corners.png)
+}
+
+.app_guitar_double .h {
+    width: 242px;
+    height: 2px;
+    border-top: 1px solid #003f67;
+    border-bottom: 1px solid #003f67;
+    background-color: #032942
+}
+
+.app_guitar_double .right {
+    width: 4px;
+    height: 4px;
+    background: url(../static/mini_corners.png) -4px 0
+}
+
+.grid_sm {
+    float: left;
+    width: 246px;
+    height: 297px
+}
+
+.grid_sm .app_pickupb_grey,.grid_sm .app_pickup_grey,.grid_sm .app_piezo_off {
+    text-align: center;
+    line-height: 24px;
+    color: #555
+}
+
+.grid_sm .app_pickupb_fwd,.grid_sm .app_pickupb_rvs,.grid_sm .app_pickup_fwd,.grid_sm .app_pickup_rvs,.grid_sm .app_piezo_on {
+    text-align: center;
+    line-height: 24px;
+    color: #fff
+}
+
+.grid_sm .app_pickupb_grey,.grid_sm .app_pickupb_fwd,.grid_sm .app_pickupb_rvs,.grid_sm .app_pickup_grey,.grid_sm .app_pickup_fwd,.grid_sm .app_pickup_rvs,.grid_sm .app_piezo_on,.grid_sm .app_piezo_off {
+    width: 125px;
+    height: 22px
+}
+
+.grid_sm .app_pickupb_fwd,.grid_sm .app_pickup_fwd,.grid_sm .app_piezo_on {
+    background: url(../static/SmallCoils.png) 0 -22px
+}
+
+.grid_sm .app_pickup_grey,.grid_sm .app_pickupb_grey,.grid_sm .app_piezo_off {
+    background: url(../static/SmallCoils.png) 0 -44px
+}
+
+.grid_sm .app_pickup_rvs,.grid_sm .app_pickupb_rvs {
+    background: url(../static/SmallCoils.png) 0 0
+}
+
+.pgen_sm {
+    width: 232px;
+    height: 126px;
+    margin: 0 0 0 -3px;
+    padding-top: 5px;
+    position: relative
+}
+
+.pgen_sm .ground {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: -20px;
+    left: 35px;
+    background: url(../static/SmallGrid.png) no-repeat 0 -140px
+}
+
+.pgen_sm .output {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: -20px;
+    left: 215px;
+    cursor: pointer;
+    background: url(../static/SmallGrid.png) no-repeat -30px -140px
+}
+
+.pgen_sm .pickup .node {
+    float: left;
+    width: 29px;
+    height: 18px
+}
+
+.pgen_sm .pickup .direction {
+    float: left;
+    width: 29px;
+    height: 18px;
+    line-height: 18px;
+    text-indent: 10px;
+    font-size: 11px
+}
+
+.pgen_sm .pickup .unsel {
+    background: url(../static/SmallGrid.png) no-repeat 0 -72px
+}
+
+.pgen_sm .pickup .active {
+    background: url(../static/SmallGrid.png) no-repeat 0 -54px
+}
+
+.pgen_sm .pickup .fwd_single {
+    background: url(../static/SmallGrid.png) no-repeat 0 0
+}
+
+.pgen_sm .pickup .fwd_left {
+    background: url(../static/SmallGrid.png) no-repeat -29px 0
+}
+
+.pgen_sm .pickup .fwd_left_grey {
+    background: url(../static/SmallGrid.png) no-repeat -29px -54px
+}
+
+.pgen_sm .pickup .fwd_right {
+    background: url(../static/SmallGrid.png) no-repeat -29px -18px
+}
+
+.pgen_sm .pickup .fwd_right_grey {
+    background: url(../static/SmallGrid.png) no-repeat -29px -72px
+}
+
+.pgen_sm .pickup .fwd_middle {
+    background: url(../static/SmallGrid.png) no-repeat -29px -36px
+}
+
+.pgen_sm .pickup .rvs_single {
+    background: url(../static/SmallGrid.png) no-repeat 0 -18px
+}
+
+.pgen_sm .pickup .rvs_left {
+    background: url(../static/SmallGrid.png) no-repeat -58px 0
+}
+
+.pgen_sm .pickup .rvs_left_grey {
+    background: url(../static/SmallGrid.png) no-repeat -58px -54px
+}
+
+.pgen_sm .pickup .rvs_right {
+    background: url(../static/SmallGrid.png) no-repeat -58px -18px
+}
+
+.pgen_sm .pickup .rvs_right_grey {
+    background: url(../static/SmallGrid.png) no-repeat -58px -72px
+}
+
+.pgen_sm .pickup .rvs_middle {
+    background: url(../static/SmallGrid.png) no-repeat -58px -36px
+}
+
+.pgen_sm .pickup .middle_grey {
+    background: url(../static/SmallGrid.png) no-repeat 0 -36px
+}
+
+.pgen_sm .pickup .fwd_check {
+    background: url(../static/SmallGrid.png) no-repeat 0 -90px
+}
+
+.pgen_sm .pickup .rvs_check {
+    background: url(../static/SmallGrid.png) no-repeat -29px -90px
+}
+
+.pgen_sm .pickup .grey_check {
+    background: url(../static/SmallGrid.png) no-repeat -58px -90px
+}
+
+.pgen_sm .pickup .piezo_left {
+    background: url(../static/SmallGrid.png) no-repeat 0 -126px
+}
+
+.pgen_sm .pickup .piezo_right {
+    background: url(../static/SmallGrid.png) no-repeat -58px -126px
+}
+
+.pgen_lg {
+    width: 384px;
+    margin: 0 auto;
+    padding: 6px 5px;
+    background: url(../static/grid_bg.png);
+    position: relative
+}
+
+.pgen_lg .ground {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: -18px;
+    left: 64px;
+    background: url(../static/grid.png) no-repeat 0 -216px
+}
+
+.pgen_lg .output {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: -18px;
+    left: 353px;
+    cursor: pointer;
+    background: url(../static/grid.png) no-repeat -48px -216px
+}
+
+.pgen_lg .pickup .node {
+    float: left;
+    cursor: pointer;
+    width: 48px;
+    height: 27px
+}
+
+.pgen_lg .pickup .direction {
+    cursor: pointer;
+    float: left;
+    width: 48px;
+    height: 27px;
+    line-height: 27px;
+    text-indent: 18px
+}
+
+.output_boost_grid {
+    position: absolute;
+    height: 31px;
+    width: 128px;
+    top: -18px;
+    left: 274px;
+    cursor: pointer;
+    background: url(../static/boost_inactive.png) no-repeat
+}
+
+.output_boost_grid:hover {
+    position: absolute;
+    height: 31px;
+    width: 128px;
+    top: -18px;
+    left: 274px;
+    cursor: pointer;
+    background: url(../static/boost_roll.png) no-repeat
+}
+
+.output_boost_grid_on {
+    position: absolute;
+    height: 31px;
+    width: 128px;
+    top: -18px;
+    left: 274px;
+    cursor: pointer;
+    background: url(../static/boost_active.png) no-repeat
+}
+
+.pgen_lg .pickup .unsel {
+    background: url(../static/grid.png) no-repeat 0 -108px
+}
+
+.pgen_lg .pickup .active {
+    background: url(../static/grid.png) no-repeat 0 -81px;
+    pointer-events: none;
+    cursor: default
+}
+
+.pgen_lg .pickup .fwd_single {
+    background: url(../static/grid.png) no-repeat 0 0
+}
+
+.pgen_lg .pickup .fwd_left {
+    background: url(../static/grid.png) no-repeat -48px 0
+}
+
+.pgen_lg .pickup .fwd_left_grey {
+    background: url(../static/grid.png) no-repeat -48px -81px
+}
+
+.pgen_lg .pickup .fwd_right {
+    background: url(../static/grid.png) no-repeat -48px -27px
+}
+
+.pgen_lg .pickup .fwd_right_grey {
+    background: url(../static/grid.png) no-repeat -48px -108px
+}
+
+.pgen_lg .pickup .fwd_middle {
+    background: url(../static/grid.png) no-repeat -48px -54px
+}
+
+.pgen_lg .pickup .rvs_single {
+    background: url(../static/grid.png) no-repeat 0 -27px
+}
+
+.pgen_lg .pickup .rvs_left {
+    background: url(../static/grid.png) no-repeat -96px 0
+}
+
+.pgen_lg .pickup .rvs_left_grey {
+    background: url(../static/grid.png) no-repeat -96px -81px
+}
+
+.pgen_lg .pickup .rvs_right {
+    background: url(../static/grid.png) no-repeat -96px -27px
+}
+
+.pgen_lg .pickup .rvs_right_grey {
+    background: url(../static/grid.png) no-repeat -96px -108px
+}
+
+.pgen_lg .pickup .rvs_middle {
+    background: url(../static/grid.png) no-repeat -96px -54px
+}
+
+.pgen_lg .pickup .middle_grey {
+    background: url(../static/grid.png) no-repeat 0 -54px
+}
+
+.pgen_lg .pickup .piezo_left {
+    background: url(../static/grid.png) no-repeat -0 -189px
+}
+
+.pgen_lg .pickup .piezo_med {
+    background: url(../static/grid.png) no-repeat -48px -189px
+}
+
+.pgen_lg .pickup .piezo_right {
+    background: url(../static/grid.png) no-repeat -96px -189px
+}
+
+.pgen_lg .pickup .fwd_check {
+    background: url(../static/grid.png) no-repeat 0 -135px
+}
+
+.pgen_lg .pickup .rvs_check {
+    background: url(../static/grid.png) no-repeat -48px -135px
+}
+
+.pgen_lg .pickup .grey_check {
+    background: url(../static/grid.png) no-repeat -96px -135px
+}
+
+.pgen_lg .pickup .fwd_check:hover {
+    background: url(../static/grid.png) no-repeat 0 -162px
+}
+
+.pgen_lg .pickup .rvs_check:hover {
+    background: url(../static/grid.png) no-repeat -48px -162px
+}
+
+.page_numbers {
+}
+
+.page_numbers .pages {
+    float: left;
+    margin-right: 10px;
+    color: #80a6be
+}
+
+.page_numbers .pages .current {
+    background: none;
+    color: #fff;
+    text-align: right;
+    font-weight: bold;
+    width: 50px;
+    color: #80a6be;
+    border: 1px solid #2c526a;
+    padding: 1px;
+    font-family: "Helvetica","Arial","sans-serif";
+    font-size: 10pt
+}
+
+.page_numbers .button {
+    float: left;
+    display: block;
+    width: 19px;
+    height: 30px
+}
+
+.app_tree .page_numbers .left {
+    background: url(../static/bar_icons.png) -68px -30px
+}
+
+.app_tree .page_numbers .right {
+    background: url(../static/bar_icons.png) -106px -30px
+}
+
+.app_tree .page_numbers .left:hover {
+    background: url(../static/bar_icons.png) -87px -30px
+}
+
+.app_tree .page_numbers .right:hover {
+    background: url(../static/bar_icons.png) -125px -30px
+}
+
+.app_preview_liblib {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: url(../static/prev/liblib.png)
+}
+
+.app_preview_devlib {
+    float: left;
+    width: 598px;
+    height: 100%;
+    background: url(../static/prev/devlib.png)
+}
+
+.app_preview_lib {
+    float: left;
+    width: 471px;
+    height: 100%;
+    background: url(../static/prev/lib.png) no-repeat
+}
+
+.app_preview_settings {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: url(../static/prev/settings.png)
+}
+
+#popup_container {
+    width: 475px;
+    margin: 0 auto
+}
+
+#popup_left {
+    float: left;
+    padding: 10px 0 0 10px;
+    width: 100px;
+    height: 140px
+}
+
+#popup_right {
+    float: left;
+    padding: 0 20px 0 15px;
+    width: 330px
+}
+
+#popup_right p {
+    font-size: 8pt;
+    font-weight: bold
+}
+
+#popup_bottom {
+    float: left;
+    height: 40px;
+    width: 475px
+}
+
+#popup_title {
+    font-size: 14pt;
+    font-weight: bold;
+    padding: 30px 0 10px 0
+}
+
+#popup_content {
+    font-size: 14pt;
+    font-weight: bold;
+    height: 20px;
+    padding: 10px 0 0 0
+}
+
+#popup_forgot {
+    padding-top: 20px;
+    font-size: 8pt;
+    height: 20px;
+    width: 275px;
+    text-align: right
+}
+
+.popup_padded {
+    float: left;
+    padding: 10px
+}
+
+.popup_pbot {
+    padding-bottom: 10px
+}
+
+.popup_label {
+    font-weight: bold;
+    float: left;
+    text-align: right;
+    width: 80px;
+    height: 30px;
+    line-height: 25px
+}
+
+.popup_field {
+    float: left;
+    padding-left: 15px;
+    width: 235px;
+    height: 30px
+}
+
+.popup_text {
+    width: 175px
+}
+
+.popup_big_button {
+    float: left;
+    display: block;
+    width: 182px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    background: url(../static/big_button_icons.png) 0 0;
+    margin-left: 10px;
+    border: 0;
+    color: #fff;
+    font-weight: bold
+}
+
+.popup_big_button:hover {
+    color: #fff;
+    background: url(../static/big_button_icons.png) 0 -26px
+}
+
+.popup_login_gap {
+    float: left;
+    width: 100px;
+    height: 26px
+}
+
+.popup_bottom_gap {
+    float: left;
+    width: 290px;
+    height: 26px
+}
+
+.popup_bottom_gap2 {
+    float: left;
+    width: 181px;
+    height: 26px
+}
+
+.popup_bottom_gap3 {
+    float: left;
+    width: 101px;
+    height: 26px
+}
+
+.popup_select {
+    margin-top: 2px;
+    width: 182px
+}
+
+.popup_button {
+    color: #fff;
+    font-size: 12px;
+    border: 0;
+    margin-left: 10px;
+    font-weight: bold;
+    float: left;
+    display: block;
+    background: url(../static/button_icons.png) 0 -26px;
+    width: 71px;
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    cursor: pointer
+}
+
+.popup_button:hover {
+    color: #fff;
+    background: url(../static/button_icons.png) 0 0
+}
+
+.popup_textarea {
+    width: 310px;
+    height: 70px
+}
+
+#app_device_header {
+    height: 30px;
+    width: 100%
+}
+
+#app_library_header span {
+    float: left;
+    width: 300px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 8pt;
+    padding: 16px 0 3px 15px;
+    font-weight: bold
+}
+
+.page_headers {
+    float: left;
+    height: 14px;
+    padding: 16px 0 3px 15px
+}
+
+.instrument_header {
+    height: 100%;
+    width: 136px;
+    background: url(../static/app_titles.png) 0 0
+}
+
+.midilibrary_header {
+    height: 100%;
+    width: 130px;
+    background: url(../static/app_titles.png) 0 -14px
+}
+
+.library_header {
+    height: 100%;
+    width: 90px;
+    background: url(../static/app_titles.png) 0 -28px
+}
+
+.midiin_header {
+    height: 100%;
+    width: 85px;
+    background: url(../static/app_titles.png) 0 -42px
+}
+
+.midiout_header {
+    height: 100%;
+    width: 85px;
+    background: url(../static/app_titles.png) 0 -56px
+}
+
+.information_header {
+    height: 100%;
+    width: 135px;
+    background: url(../static/app_titles.png) 0 -70px
+}
+
+.settings_header {
+    height: 100%;
+    width: 95px;
+    background: url(../static/app_titles.png) 0 -84px
+}
+
+.output_settings_header {
+    height: 100%;
+    width: 175px;
+    background: url(../static/app_titles.png) 0 -98px
+}
+
+.bank_settings_header {
+    height: 100%;
+    width: 150px;
+    background: url(../static/app_titles.png) 0 -112px
+}
+
+.bank_z_switch_header {
+    height: 100%;
+    width: 245px;
+    background: url(../static/app_titles.png) 0 -126px
+}
+
+.bank_z_kickout_header {
+    height: 100%;
+    width: 245px;
+    background: url(../static/app_titles.png) 0 -140px
+}
+
+.piezo_knob_header {
+    height: 100%;
+    width: 285px;
+    background: url(../static/app_titles.png) 0 -154px
+}
+
+.piezo_switch_header {
+    height: 100%;
+    width: 305px;
+    background: url(../static/app_titles.png) 0 -168px
+}
+
+#app_settings_model {
+    float: left;
+    width: 353px;
+    height: 595px
+}
+
+#app_settings_info {
+    float: left;
+    width: 590px;
+    height: 595px
+}
+
+#app_settings_specs {
+    width: 590px;
+    height: 300px
+}
+
+#app_settings_specs .info {
+    float: left;
+    width: 355px;
+    height: 300px
+}
+
+#app_settings_specs .set {
+    margin-top: 20px
+}
+
+#app_settings_specs .set h2 {
+    float: left;
+    width: 150px;
+    text-align: right;
+    padding-right: 25px;
+    margin-top: 10px
+}
+
+#app_settings_specs .set h3 {
+    float: left;
+    width: 130px;
+    margin-top: 10px;
+    font-weight: bold
+}
+
+#app_settings_specs .set h4 {
+    margin-left: 175px;
+    font-size: 8pt;
+    color: #aaa
+}
+
+#app_settings_specs .set .clear {
+    clear: both
+}
+
+#app_settings_specs .buttons {
+    float: left;
+    width: 235px;
+    height: 157px;
+    padding-top: 143px
+}
+
+#app_settings_specs .buttons a {
+    margin-top: 11px;
+    cursor: pointer
+}
+
+#app_settings_battery h2 {
+    float: left;
+    font-size: 18px;
+    padding-top: 10px
+}
+
+#app_settings_battery h3 {
+    float: left;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    padding-top: 10px
+}
+
+#app_settings_copy {
+    width: 580px;
+    height: 20px;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 8pt;
+    color: #aaa
+}
+
+#app_settings_copy a {
+    font-size: 8pt;
+    color: #aaa
+}
+
+#app_settings_banks {
+    background: url(../static/settings_bank_bg.png);
+    height: 104px;
+    width: 569px;
+    margin-top: 2px;
+    margin-left: 5px;
+    border: 1px solid #757575;
+    padding-left: 15px
+}
+
+#app_settings_banks h2 {
+    margin: 15px 0 10px 0;
+    font-size: 16pt
+}
+
+#app_settings_banks h3 {
+    float: left;
+    padding: 11px 0 0 25px;
+    font-size: 14pt
+}
+
+#app_settings_banks a {
+    float: left;
+    margin-left: 15px
+}
+
+#app_midi_left {
+    width: 225px;
+    height: 595px;
+    padding: 0 5px 0 5px;
+    float: left
+}
+
+#app_midi_right {
+    width: 708px;
+    height: 595px;
+    float: left
+}
+
+.midi_right_container {
+    width: 698px;
+    padding: 0 5px 0 5px
+}
+
+.midi_in_add {
+    margin-top: 5px;
+    cursor: pointer;
+    width: 29px;
+    height: 26px;
+    background: url(../static/add_button_icons.png) 0 -26px
+}
+
+.midi_in_add:hover {
+    background: url(../static/add_button_icons.png) 0 0
+}
+
+.midi_out_add {
+    margin-top: 5px;
+    cursor: pointer;
+    width: 29px;
+    height: 26px;
+    background: url(../static/add_button_icons.png) 0 -78px
+}
+
+.midi_out_add:hover {
+    background: url(../static/add_button_icons.png) 0 -52px
+}
+
+.midi_off_add {
+    margin-top: 5px;
+    cursor: pointer;
+    width: 29px;
+    height: 26px;
+    background: url(../static/add_button_icons.png) 0 -104px
+}
+
+.midi_tree .sub_name span {
+    margin-left: 10px
+}
+
+.midi_tree_pad {
+    margin-top: 10px
+}
+
+#settings_btn {
+    background: url(../static/bar_icons.png) -30px -120px #003f67;
+    width: 178px;
+    margin-left: 9px
+}
+
+#sett_btn_func {
+    width: 658px
+}
+
+.boost_button_func {
+    width: 203px;
+    margin-left: 10px
+}
+
+.piezo_button_func {
+    width: 203px;
+    margin-left: 10px
+}
+
+.save_button_func {
+    width: 203px;
+    margin-left: 10px
+}
+
+.midi_scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 515px
+}
+
+.midi_tree .midi_row {
+    margin-bottom: 2px;
+    height: 30px;
+    width: 682px
+}
+
+.midi_tree .name {
+    line-height: 30px;
+    width: 180px;
+    height: 30px;
+    float: left;
+    font-weight: bold;
+    border-right: #000 2px solid
+}
+
+.midi_tree .channel {
+    line-height: 30px;
+    width: 90px;
+    height: 30px;
+    float: left;
+    font-weight: bold;
+    border-right: #000 2px solid
+}
+
+.midi_tree .type {
+    line-height: 30px;
+    width: 160px;
+    height: 30px;
+    float: left;
+    font-weight: bold;
+    border-right: #000 2px solid
+}
+
+.midi_tree .number {
+    line-height: 30px;
+    width: 100px;
+    height: 30px;
+    float: left;
+    font-weight: bold;
+    border-right: #000 2px solid
+}
+
+.midi_tree .data {
+    line-height: 30px;
+    width: 80px;
+    height: 30px;
+    float: left;
+    font-weight: bold;
+    border-right: #000 2px solid
+}
+
+.midi_tree .option {
+    line-height: 30px;
+    width: 60px;
+    height: 30px;
+    float: left;
+    font-weight: bold;
+    border-right: #000 2px solid
+}
+
+.midi_tree .name select {
+    width: 150px
+}
+
+.midi_tree .channel select {
+    width: 90px
+}
+
+.midi_tree .type select {
+    width: 160px
+}
+
+.midi_tree .number select {
+    width: 100px
+}
+
+.midi_tree .data select {
+    width: 80px
+}
+
+.midi_tree select {
+    margin-top: 5px;
+    height: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 0 5px 0 5px;
+    text-align: center
+}
+
+.midi_tree select option {
+    background-color: #003f67
+}
+
+.midi_tree .midi_in .name {
+    background: url(../static/bar_icons.png) 0 -120px #003f67
+}
+
+.midi_tree .midi_out .name {
+    background: url(../static/bar_icons.png) 0 -120px #014056
+}
+
+.midi_tree .midi_cmd .name {
+    background: url(../static/bar_icons.png) 0 -120px #363b43
+}
+
+.midi_tree .midi_in .sub_name {
+    background: url(../static/bar_icons.png) -30px -120px #003f67
+}
+
+.midi_tree .midi_out .sub_name {
+    background: url(../static/bar_icons.png) -30px -120px #014056
+}
+
+.midi_tree .midi_cmd .sub_name {
+    background: url(../static/bar_icons.png) -30px -120px #363b43
+}
+
+.settings_left {
+    width: 265px;
+    height: 595px;
+    padding: 0 0 0 0;
+    float: left
+}
+
+.settings_left .settings_left_padding {
+    width: 235px;
+    padding: 0 15px 0 15px
+}
+
+.settings_right {
+    width: 678px;
+    height: 595px;
+    float: left
+}
+
+.settings_right .btns_right_settings {
+    margin-left: 405px;
+    float: left
+}
+
+.settings_scroll {
+    margin-top: 10px;
+    width: 678px;
+    height: 551px;
+    overflow-y: scroll
+}
+
+.setting_header_desc {
+    margin: 5px 0 10px 15px;
+    font-weight: bold;
+    height: 14px
+}
+
+.settings_hr {
+    height: 2px;
+    width: 100%;
+    background-color: #032942;
+    border-top: 1px solid #003f67;
+    border-bottom: 1px solid #003f67;
+    margin: 5px 0 5px 0
+}
+
+.settings_left .battery {
+    background: url(../static/settings_battery.png);
+    width: 97px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+    font-weight: bold;
+    padding: 3px 10px 3px 3px;
+    margin-top: 10px
+}
+
+.settings_left .battery .life {
+    height: 30px;
+    background: url(../static/settings_battery_life.png)
+}
+
+.settings_left .set {
+    margin-top: 20px
+}
+
+.settings_left .default_set {
+    margin-top: 170px
+}
+
+.settings_left .faq_set {
+    position: absolute;
+    top: 350px
+}
+
+.settings_left .set h2 {
+    font-weight: bold;
+    height: 25px
+}
+
+.settings_button {
+    height: 26px;
+    line-height: 26px;
+    width: 244px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px
+}
+
+.settings_button_on {
+    background: url(../static/settings_buttons.png) 0 -26px;
+    cursor: pointer
+}
+
+.settings_button_on:hover {
+    background: url(../static/settings_buttons.png) 0 0
+}
+
+.settings_button_disabled {
+    background: url(../static/settings_buttons.png) 0 -104px;
+    pointer-events: none;
+    cursor: default
+}
+
+.settings_button_reset {
+    background: url(../static/settings_buttons.png) 0 -78px;
+    cursor: pointer
+}
+
+.settings_button_reset:hover {
+    background: url(../static/settings_buttons.png) 0 -52px;
+    cursor: pointer;
+    color: #cc0101
+}
+
+.settings_toggle {
+    width: 306px;
+    height: 135px;
+    margin: 0 0 15px 15px;
+    float: left
+}
+
+.settings_firmware_info {
+    margin-top: 10px
+}
+
+.settings_firmware_info p {
+    margin-top: 10px
+}
+
+.settings_settings {
+}
+
+.settings_settings .output_settings_1on {
+    background: url(../static/settings_settings.jpg) 0 0
+}
+
+.settings_settings .output_settings_1off {
+    cursor: pointer;
+    background: url(../static/settings_settings.jpg) 0 -135px
+}
+
+.settings_settings .output_settings_1off:hover {
+    background: url(../static/settings_settings.jpg) 0 0
+}
+
+.settings_settings .output_settings_2on {
+    background: url(../static/settings_settings.jpg) 0 -270px
+}
+
+.settings_settings .output_settings_2off {
+    cursor: pointer;
+    background: url(../static/settings_settings.jpg) 0 -405px
+}
+
+.settings_settings .output_settings_2off:hover {
+    background: url(../static/settings_settings.jpg) 0 -270px
+}
+
+.settings_settings .bank_z_switch_1on {
+    background: url(../static/settings_settings.jpg) 0 -540px
+}
+
+.settings_settings .bank_z_switch_1off {
+    cursor: pointer;
+    background: url(../static/settings_settings.jpg) 0 -675px
+}
+
+.settings_settings .bank_z_switch_1off:hover {
+    background: url(../static/settings_settings.jpg) 0 -540px
+}
+
+.settings_settings .bank_z_switch_2on {
+    background: url(../static/settings_settings.jpg) 0 -810px
+}
+
+.settings_settings .bank_z_switch_2off {
+    cursor: pointer;
+    background: url(../static/settings_settings.jpg) 0 -945px
+}
+
+.settings_settings .bank_z_switch_2off:hover {
+    background: url(../static/settings_settings.jpg) 0 -810px
+}
+
+.settings_settings .bank_z_switch_3on {
+    background: url(../static/settings_settings.jpg) 0 -1080px
+}
+
+.settings_settings .bank_z_switch_3off {
+    cursor: pointer;
+    background: url(../static/settings_settings.jpg) 0 -1215px
+}
+
+.settings_settings .bank_z_switch_3off:hover {
+    background: url(../static/settings_settings.jpg) 0 -1080px
+}
+
+.settings_settings .bank_z_switch_4on {
+    background: url(../static/settings_settings.jpg) 0 -1350px
+}
+
+.settings_settings .bank_z_switch_4off {
+    cursor: pointer;
+    background: url(../static/settings_settings.jpg) 0 -1485px
+}
+
+.settings_settings .bank_z_switch_4off:hover {
+    background: url(../static/settings_settings.jpg) 0 -1350px
+}
+
+.settings_settings .bank_z_kickout_1on {
+    background: url(../static/settings_settings.jpg) 0 -1620px
+}
+
+.settings_settings .bank_z_kickout_1off {
+    cursor: pointer;
+    background: url(../static/settings_settings.jpg) 0 -1755px
+}
+
+.settings_settings .bank_z_kickout_1off:hover {
+    background: url(../static/settings_settings.jpg) 0 -1620px
+}
+
+.settings_settings .bank_z_kickout_2on {
+    background: url(../static/settings_settings.jpg) 0 -1890px
+}
+
+.settings_settings .bank_z_kickout_2off {
+    cursor: pointer;
+    background: url(../static/settings_settings.jpg) 0 -2025px
+}
+
+.settings_settings .bank_z_kickout_2off:hover {
+    background: url(../static/settings_settings.jpg) 0 -1890px
+}
+
+.settings_settings .bank_z_kickout_3on {
+    background: url(../static/settings_settings.jpg) 0 -2160px
+}
+
+.settings_settings .bank_z_kickout_3off {
+    cursor: pointer;
+    background: url(../static/settings_settings.jpg) 0 -2295px
+}
+
+.settings_settings .bank_z_kickout_3off:hover {
+    background: url(../static/settings_settings.jpg) 0 -2160px
+}
+
+.settings_settings .piezo_knob_1on {
+    background: url(../static/settings_settings.jpg) 0 -2430px
+}
+
+.settings_settings .piezo_knob_1off {
+    cursor: pointer;
+    background: url(../static/settings_settings.jpg) 0 -2565px
+}
+
+.settings_settings .piezo_knob_1off:hover {
+    background: url(../static/settings_settings.jpg) 0 -2430px
+}
+
+.settings_settings .piezo_knob_2on {
+    background: url(../static/settings_settings.jpg) 0 -2700px
+}
+
+.settings_settings .piezo_knob_2off {
+    cursor: pointer;
+    background: url(../static/settings_settings.jpg) 0 -2835px
+}
+
+.settings_settings .piezo_knob_2off:hover {
+    background: url(../static/settings_settings.jpg) 0 -2700px
+}
+
+.settings_settings .piezo_knob_stallion_1on {
+    background: url(../static/stallion_magnetic_blue.png)
+}
+
+.settings_settings .piezo_knob_stallion_1off {
+    cursor: pointer;
+    background: url(../static/stallion_magnetic_gray.png)
+}
+
+.settings_settings .piezo_knob_stallion_1off:hover {
+    background: url(../static/stallion_magnetic_blue.png)
+}
+
+.settings_settings .piezo_knob_stallion_2on {
+    background: url(../static/stallion_master_blue.png)
+}
+
+.settings_settings .piezo_knob_stallion_2off {
+    cursor: pointer;
+    background: url(../static/stallion_master_gray.png)
+}
+
+.settings_settings .piezo_knob_stallion_2off:hover {
+    background: url(../static/stallion_master_blue.png)
+}
+
+.settings_settings .piezo_switch_1on {
+    background: url(../static/settings_settings.jpg) 0 -2970px
+}
+
+.settings_settings .piezo_switch_1off {
+    cursor: pointer;
+    background: url(../static/settings_settings.jpg) 0 -3105px
+}
+
+.settings_settings .piezo_switch_1off:hover {
+    background: url(../static/settings_settings.jpg) 0 -2970px
+}
+
+.settings_settings .piezo_switch_2on {
+    background: url(../static/settings_settings.jpg) 0 -3240px
+}
+
+.settings_settings .piezo_switch_2off {
+    cursor: pointer;
+    background: url(../static/settings_settings.jpg) 0 -3375px
+}
+
+.settings_settings .piezo_switch_2off:hover {
+    background: url(../static/settings_settings.jpg) 0 -3240px
+}
+
+.settings_settings .bank_z_basskickout_1on {
+    background: url(../static/settings_settings.jpg) 0 -3510px
+}
+
+.settings_settings .bank_z_basskickout_1off {
+    cursor: pointer;
+    background: url(../static/settings_settings.jpg) 0 -3645px
+}
+
+.settings_settings .bank_z_basskickout_1off:hover {
+    background: url(../static/settings_settings.jpg) 0 -3510px
+}
+
+.settings_settings .bank_z_basskickout_2on {
+    background: url(../static/settings_settings.jpg) 0 -3780px
+}
+
+.settings_settings .bank_z_basskickout_2off {
+    cursor: pointer;
+    background: url(../static/settings_settings.jpg) 0 -3915px
+}
+
+.settings_settings .bank_z_basskickout_2off:hover {
+    background: url(../static/settings_settings.jpg) 0 -3780px
+}
+
+.settings_settings .bank_z_basskickout_3on {
+    background: url(../static/settings_settings.jpg) 0 -4050px
+}
+
+.settings_settings .bank_z_basskickout_3off {
+    cursor: pointer;
+    background: url(../static/settings_settings.jpg) 0 -4185px
+}
+
+.settings_settings .bank_z_basskickout_3off:hover {
+    background: url(../static/settings_settings.jpg) 0 -4050px
+}
+
+.app_preview_liblib {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: url(../static/prev/liblib.png)
+}
+
+.app_preview_devlib {
+    float: left;
+    width: 598px;
+    height: 100%;
+    background: url(../static/prev/devlib.png)
+}
+
+.app_preview_lib {
+    float: left;
+    width: 471px;
+    height: 100%;
+    background: url(../static/prev/lib.png) no-repeat
+}
+
+.app_preview_settings {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: url(../static/prev/settings.png)
+}
+
+.librarytwo_header {
+    height: 100%;
+    width: 87px;
+    background: url(../static/app_titles.png) 0 -28px
+}
+
+#app_settings_model {
+    float: left;
+    width: 353px;
+    height: 595px
+}
+
+#app_settings_info {
+    float: left;
+    width: 590px;
+    height: 595px
+}
+
+#app_settings_specs {
+    width: 590px;
+    height: 300px
+}
+
+#app_settings_specs .info {
+    float: left;
+    width: 355px;
+    height: 300px
+}
+
+#app_settings_specs .set {
+    margin-top: 20px
+}
+
+#app_settings_specs .set h2 {
+    float: left;
+    width: 150px;
+    text-align: right;
+    padding-right: 25px;
+    margin-top: 10px
+}
+
+#app_settings_specs .set h3 {
+    float: left;
+    width: 130px;
+    margin-top: 10px;
+    font-weight: bold
+}
+
+#app_settings_specs .set h4 {
+    margin-left: 175px;
+    font-size: 8pt;
+    color: #aaa
+}
+
+#app_settings_specs .set .clear {
+    clear: both
+}
+
+#app_settings_specs .buttons {
+    float: left;
+    width: 235px;
+    height: 157px;
+    padding-top: 143px
+}
+
+#app_settings_specs .buttons a {
+    margin-top: 11px;
+    cursor: pointer
+}
+
+#app_settings_battery {
+    width: 440px;
+    height: 80px;
+    padding: 40px 0 0 150px
+}
+
+#app_settings_battery h2 {
+    float: left;
+    font-size: 18px;
+    padding-top: 10px
+}
+
+#app_settings_battery h3 {
+    float: left;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    padding-top: 10px
+}
+
+#app_settings_battery .battery {
+    background: url(../static/settings_battery.png);
+    width: 97px;
+    height: 30px;
+    float: left;
+    margin-left: 30px;
+    padding: 3px 10px 3px 3px
+}
+
+#app_settings_battery .battery .life {
+    height: 30px;
+    background: url(../static/settings_battery_life.png)
+}
+
+#app_settings_copy {
+    width: 580px;
+    height: 20px;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 8pt;
+    color: #aaa
+}
+
+#app_settings_copy a {
+    font-size: 8pt;
+    color: #aaa
+}
+
+#app_settings_banks {
+    background: url(../static/settings_bank_bg.png);
+    height: 104px;
+    width: 569px;
+    margin-top: 2px;
+    margin-left: 5px;
+    border: 1px solid #757575;
+    padding-left: 15px
+}
+
+#app_settings_banks h2 {
+    margin: 15px 0 10px 0;
+    font-size: 16pt
+}
+
+#app_settings_banks h3 {
+    float: left;
+    padding: 11px 0 0 25px;
+    font-size: 14pt
+}
+
+#app_settings_banks a {
+    float: left;
+    margin-left: 15px
+}
+
+#app_midi_left {
+    width: 225px;
+    height: 595px;
+    padding: 0 5px 0 5px;
+    float: left
+}
+
+#app_midi_right {
+    width: 708px;
+    height: 595px;
+    float: left
+}
+
+#app_midi_header {
+}
+
+.page_numbers {
+}
+
+.page_numbers .pages {
+    float: left;
+    margin-right: 10px;
+    color: #80a6be
+}
+
+.page_numbers .pages .current {
+    background: none;
+    color: #fff;
+    text-align: right;
+    font-weight: bold;
+    width: 50px;
+    color: #80a6be;
+    border: 1px solid #2c526a;
+    padding: 1px;
+    font-family: "Helvetica","Arial","sans-serif";
+    font-size: 10pt
+}
+
+.page_numbers .button {
+    float: left;
+    display: block;
+    width: 19px;
+    height: 30px
+}
+
+.app_tree .page_numbers .left {
+    background: url(../static/bar_icons.png) -68px -30px
+}
+
+.app_tree .page_numbers .right {
+    background: url(../static/bar_icons.png) -106px -30px
+}
+
+.app_tree .page_numbers .left:hover {
+    background: url(../static/bar_icons.png) -87px -30px
+}
+
+.app_tree .page_numbers .right:hover {
+    background: url(../static/bar_icons.png) -125px -30px
+}
+
+.btns_float_right {
+    z-index: 500;
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.app_tab {
+    margin-bottom: 0
+}
+
+.pgen_sm {
+    position: absolute;
+    left: 10px;
+    bottom: 5px
+}
+
+.pgen_sm .ground {
+    display: none
+}
+
+.pgen_sm .output {
+    display: none
+}
+
+.output_boost {
+    height: 25px;
+    background: url(../static/knob_inactive.png) no-repeat;
+    padding-left: 26px;
+    padding-top: 27px;
+    cursor: pointer;
+    margin-left: 350px;
+    margin-top: 257px;
+    z-index: auto;
+    position: absolute;
+    width: 25px
+}
+
+.output_boost:hover {
+    height: 30px;
+    background: url(../static/knob_rollover.png) no-repeat;
+    padding-left: 26px;
+    padding-top: 27px;
+    cursor: pointer;
+    margin-left: 350px;
+    margin-top: 257px;
+    z-index: auto;
+    position: absolute;
+    width: 30px
+}
+
+.output_boost_on {
+    height: 30px;
+    background: url(../static/knob_active.png) no-repeat;
+    padding-left: 26px;
+    padding-top: 27px;
+    cursor: pointer;
+    margin-left: 350px;
+    margin-top: 257px;
+    z-index: auto;
+    position: absolute;
+    width: 30px
+}
+
+.library_pages {
+    width: 225px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    height: 22px;
+    line-height: 22px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    color: red
+}
+
+.tree_lg .name {
+    margin-right: 1px;
+    padding-left: 25px
+}
+
+.tree_lg .scheme_name {
+}
+
+.tree_sm .name {
+}
+
+.app_tree .name span {
+    height: 30px;
+    overflow: hidden;
+    display: block
+}
+
+.app_tree .name span {
+    position: relative
+}
+
+.app_tree .toolbar {
+    z-index: 600
+}
+
+.app_tree .row_bg,.app_tree .row_bg2 {
+    position: relative
+}
+
+.app_tree .name {
+    float: left;
+    cursor: text height: 30px;
+    line-height: 30px;
+    margin: 0 -50px 2px 0;
+    font-weight: bold
+}
+
+.app_tree .collapse,.app_tree .expand,.app_tree .audition_on,.app_tree .default_on,.app_tree .default_off {
+    width: 19px;
+    height: 30px;
+    margin-left: 3px;
+    position: absolute;
+    left: 30px;
+    top: 0
+}
+
+.row_bg {
+    cursor: pointer
+}
+
+.app_tree .preset .row_bg,.midi_tree .midi_cmd .name .icon {
+    background: url(../static/bar_icons.png) 0 -120px #363b43
+}
+
+.app_tree .scheme .highlight {
+    background: url(../static/bar_icons.png) 0 -150px #003f67
+}
+
+.app_tree .bank .highlight {
+    background: url(../static/bar_icons.png) 0 -150px #014056
+}
+
+.app_tree .preset .highlight {
+    background: url(../static/bar_icons.png) 0 -150px #363b43
+}
+
+.app_tree .preset .selected {
+    background: url(../static/bar_icons.png) 0 -150px #363b43
+}
+
+.app_tree .scheme .toolbar .save {
+    background: url(../static/bar_icons.png) -30px -60px #003f67
+}
+
+.app_tree .scheme .toolbar .trash {
+    background: url(../static/bar_icons.png) -30px -30px #003f67
+}
+
+.app_tree .scheme .toolbar .note {
+    background: url(../static/bar_icons.png) -30px 0 #003f67
+}
+
+.app_tree .scheme .toolbar .save:hover {
+    background: url(../static/bar_icons.png) -49px -60px #003f67
+}
+
+.app_tree .scheme .toolbar .trash:hover {
+    background: url(../static/bar_icons.png) -49px -30px #003f67
+}
+
+.app_tree .scheme .toolbar .note:hover {
+    background: url(../static/bar_icons.png) -49px 0 #003f67
+}
+
+.app_tree .bank .toolbar .save {
+    background: url(../static/bar_icons.png) -30px -60px #014056
+}
+
+.app_tree .bank .toolbar .trash {
+    background: url(../static/bar_icons.png) -30px -30px #014056
+}
+
+.app_tree .bank .toolbar .note {
+    background: url(../static/bar_icons.png) -30px 0 #014056
+}
+
+.app_tree .bank .toolbar .save:hover {
+    background: url(../static/bar_icons.png) -49px -60px #014056
+}
+
+.app_tree .bank .toolbar .trash:hover {
+    background: url(../static/bar_icons.png) -49px -30px #014056
+}
+
+.app_tree .bank .toolbar .note:hover {
+    background: url(../static/bar_icons.png) -49px 0 #014056
+}
+
+.app_tree .preset .toolbar .save {
+    background: url(../static/bar_icons.png) -30px -60px #363b43
+}
+
+.app_tree .preset .toolbar .trash {
+    background: url(../static/bar_icons.png) -30px -30px #363b43
+}
+
+.app_tree .preset .toolbar .note {
+    background: url(../static/bar_icons.png) -30px 0 #363b43
+}
+
+.app_tree .preset .toolbar .save:hover {
+    background: url(../static/bar_icons.png) -49px -60px #363b43
+}
+
+.app_tree .preset .toolbar .trash:hover {
+    background: url(../static/bar_icons.png) -49px -30px #363b43
+}
+
+.app_tree .preset .toolbar .note:hover {
+    background: url(../static/bar_icons.png) -49px 0 #363b43
+}
+
+.app_tree .pagination2 {
+    z-index: 550;
+    padding-bottom: 2px
+}
+
+.app_tree .pagination .row_bg {
+    background: url(../static/bar_icons.png) 0 -120px #003f67
+}
+
+.app_tree .pagination2 {
+    position: relative
+}
+
+.pagination {
+    color: #80a6be
+}
+
+.midi_tree .sub_name {
+    text-align: center
+}
+
+.pgen_sm .pickup .piezo_med {
+    background: url(../static/SmallGrid.png) no-repeat -29px -126px
+}
+
+#stallion {
+    background: #000;
+    pointer-events: none;
+    opacity: 0
+}
+
+.battery_main {
+    background: url(../static/settings_battery.png);
+    width: 97px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+    font-weight: bold;
+    padding: 3px 10px 3px 3px;
+    margin-top: -37px;
+    margin-left: 127px
+}
+
+.battery_main_hide {
+    visibility: hidden
+}
+
+life_main {
+}
+
+.device_title {
+    font-size: 20px;
+    font-weight: bold
+}
+
+.settings_right .name {
+    margin-right: 1px;
+    padding-left: 25px
+}
+
+.settings_right .scheme {
+    width: 180px
+}
+
+.settings_right .app_tree {
+    padding-left: 30px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    float: left
+}
+
+.progress_outer {
+    width: 450px;
+    height: 20px;
+    border: solid #fff 2px;
+    background-color: #444;
+    margin: 0 auto;
+    margin-top: 10px
+}
+
+.progress_inner {
+    float: left;
+    height: 20px;
+    background-color: #50aa50
+}

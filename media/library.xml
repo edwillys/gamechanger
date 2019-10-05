@@ -1,0 +1,758 @@
+<library>
+    <presets>
+        <p id="1" l="1" u="0" r="1" d="010000000061ffffffffffffffffffff" a="" o=""/>
+        <p id="2" l="1" u="0" r="2" d="010000006001ffffffffffffffffffff" a="" o=""/>
+        <p id="3" l="1" u="0" r="3" d="02000000ffff0263ffffffffffffffff" a="" o=""/>
+        <p id="4" l="1" u="0" r="4" d="02000000ffff6203ffffffffffffffff" a="" o=""/>
+        <p id="5" l="1" u="0" r="5" d="04000000ffffffff0465ffffffffffff" a="" o=""/>
+        <p id="6" l="1" u="0" r="6" d="04000000ffffffff6405ffffffffffff" a="" o=""/>
+        <p id="7" l="1" u="0" r="7" d="08000000ffffffffffff0869ffffffff" a="" o=""/>
+        <p id="8" l="1" u="0" r="8" d="08000000ffffffffffff6809ffffffff" a="" o=""/>
+        <p id="9" l="1" u="0" r="9" d="10000000ffffffffffffffff0a6bffff" a="" o=""/>
+        <p id="10" l="1" u="0" r="10" d="10000000ffffffffffffffff6a0bffff" a="" o=""/>
+        <p id="11" l="1" u="0" r="11" d="20000000ffffffffffffffffffff0c6d" a="" o=""/>
+        <p id="12" l="1" u="0" r="12" d="20000000ffffffffffffffffffff6c0d" a="" o=""/>
+        <p id="13" l="1" u="0" r="13" d="0300000000111263ffffffffffffffff" a="" o=""/>
+        <p id="14" l="1" u="0" r="14" d="0300000010011263ffffffffffffffff" a="" o=""/>
+        <p id="15" l="1" u="0" r="15" d="0300000000116213ffffffffffffffff" a="" o=""/>
+        <p id="16" l="1" u="0" r="16" d="0300000010016213ffffffffffffffff" a="" o=""/>
+        <p id="17" l="1" u="0" r="17" d="0300000000610263ffffffffffffffff" a="" o=""/>
+        <p id="18" l="1" u="0" r="18" d="0300000060010263ffffffffffffffff" a="" o=""/>
+        <p id="19" l="1" u="0" r="19" d="0300000000616203ffffffffffffffff" a="" o=""/>
+        <p id="20" l="1" u="0" r="20" d="0300000060016203ffffffffffffffff" a="" o=""/>
+        <p id="21" l="1" u="0" r="21" d="050000000011ffff1465ffffffffffff" a="" o=""/>
+        <p id="22" l="1" u="0" r="22" d="050000001001ffff1465ffffffffffff" a="" o=""/>
+        <p id="23" l="1" u="0" r="23" d="050000000011ffff6415ffffffffffff" a="" o=""/>
+        <p id="24" l="1" u="0" r="24" d="050000001001ffff6415ffffffffffff" a="" o=""/>
+        <p id="25" l="1" u="0" r="25" d="050000000061ffff0465ffffffffffff" a="" o=""/>
+        <p id="26" l="1" u="0" r="26" d="050000006001ffff0465ffffffffffff" a="" o=""/>
+        <p id="27" l="1" u="0" r="27" d="050000000061ffff6405ffffffffffff" a="" o=""/>
+        <p id="28" l="1" u="0" r="28" d="050000006001ffff6405ffffffffffff" a="" o=""/>
+        <p id="29" l="1" u="0" r="29" d="090000000011ffffffff1869ffffffff" a="" o=""/>
+        <p id="30" l="1" u="0" r="30" d="090000001001ffffffff1869ffffffff" a="" o=""/>
+        <p id="31" l="1" u="0" r="31" d="090000000011ffffffff6819ffffffff" a="" o=""/>
+        <p id="32" l="1" u="0" r="32" d="090000001001ffffffff6819ffffffff" a="" o=""/>
+        <p id="33" l="1" u="0" r="33" d="090000000061ffffffff0869ffffffff" a="" o=""/>
+        <p id="34" l="1" u="0" r="34" d="090000006001ffffffff0869ffffffff" a="" o=""/>
+        <p id="35" l="1" u="0" r="35" d="090000000061ffffffff6809ffffffff" a="" o=""/>
+        <p id="36" l="1" u="0" r="36" d="090000006001ffffffff6809ffffffff" a="" o=""/>
+        <p id="37" l="1" u="0" r="37" d="110000000011ffffffffffff1a6bffff" a="" o=""/>
+        <p id="38" l="1" u="0" r="38" d="110000001001ffffffffffff1a6bffff" a="" o=""/>
+        <p id="39" l="1" u="0" r="39" d="110000000011ffffffffffff6a1bffff" a="" o=""/>
+        <p id="40" l="1" u="0" r="40" d="110000001001ffffffffffff6a1bffff" a="" o=""/>
+        <p id="41" l="1" u="0" r="41" d="110000000061ffffffffffff0a6bffff" a="" o=""/>
+        <p id="42" l="1" u="0" r="42" d="110000006001ffffffffffff0a6bffff" a="" o=""/>
+        <p id="43" l="1" u="0" r="43" d="110000000061ffffffffffff6a0bffff" a="" o=""/>
+        <p id="44" l="1" u="0" r="44" d="110000006001ffffffffffff6a0bffff" a="" o=""/>
+        <p id="45" l="1" u="0" r="45" d="210000000011ffffffffffffffff1c6d" a="" o=""/>
+        <p id="46" l="1" u="0" r="46" d="210000001001ffffffffffffffff1c6d" a="" o=""/>
+        <p id="47" l="1" u="0" r="47" d="210000000011ffffffffffffffff6c1d" a="" o=""/>
+        <p id="48" l="1" u="0" r="48" d="210000001001ffffffffffffffff6c1d" a="" o=""/>
+        <p id="49" l="1" u="0" r="49" d="210000000061ffffffffffffffff0c6d" a="" o=""/>
+        <p id="50" l="1" u="0" r="50" d="210000006001ffffffffffffffff0c6d" a="" o=""/>
+        <p id="51" l="1" u="0" r="51" d="210000000061ffffffffffffffff6c0d" a="" o=""/>
+        <p id="52" l="1" u="0" r="52" d="210000006001ffffffffffffffff6c0d" a="" o=""/>
+        <p id="53" l="1" u="0" r="53" d="0300000010610213ffffffffffffffff" a="" o=""/>
+        <p id="54" l="1" u="0" r="54" d="0300000010610213ffffffffffffffff" a="" o=""/>
+        <p id="55" l="1" u="0" r="55" d="0300000060110213ffffffffffffffff" a="" o=""/>
+        <p id="56" l="1" u="0" r="56" d="0300000060111203ffffffffffffffff" a="" o=""/>
+        <p id="57" l="1" u="0" r="57" d="0300000000610263ffffffffffffffff" a="" o=""/>
+        <p id="58" l="1" u="0" r="58" d="0300000000616203ffffffffffffffff" a="" o=""/>
+        <p id="59" l="1" u="0" r="59" d="0300000060010263ffffffffffffffff" a="" o=""/>
+        <p id="60" l="1" u="0" r="60" d="0300000060016203ffffffffffffffff" a="" o=""/>
+        <p id="61" l="1" u="0" r="61" d="06000000ffff02131465ffffffffffff" a="" o=""/>
+        <p id="62" l="1" u="0" r="62" d="06000000ffff12031465ffffffffffff" a="" o=""/>
+        <p id="63" l="1" u="0" r="63" d="06000000ffff02136415ffffffffffff" a="" o=""/>
+        <p id="64" l="1" u="0" r="64" d="06000000ffff12036415ffffffffffff" a="" o=""/>
+        <p id="65" l="1" u="0" r="65" d="06000000ffff02630465ffffffffffff" a="" o=""/>
+        <p id="66" l="1" u="0" r="66" d="06000000ffff62030465ffffffffffff" a="" o=""/>
+        <p id="67" l="1" u="0" r="67" d="06000000ffff02636405ffffffffffff" a="" o=""/>
+        <p id="68" l="1" u="0" r="68" d="06000000ffff62036405ffffffffffff" a="" o=""/>
+        <p id="69" l="1" u="0" r="69" d="0a000000ffff0213ffff1869ffffffff" a="" o=""/>
+        <p id="70" l="1" u="0" r="70" d="0a000000ffff1203ffff1869ffffffff" a="" o=""/>
+        <p id="71" l="1" u="0" r="71" d="0a000000ffff0213ffff6819ffffffff" a="" o=""/>
+        <p id="72" l="1" u="0" r="72" d="0a000000ffff1203ffff6819ffffffff" a="" o=""/>
+        <p id="73" l="1" u="0" r="73" d="0a000000ffff0263ffff0869ffffffff" a="" o=""/>
+        <p id="74" l="1" u="0" r="74" d="0a000000ffff6203ffff0869ffffffff" a="" o=""/>
+        <p id="75" l="1" u="0" r="75" d="0a000000ffff0263ffff6809ffffffff" a="" o=""/>
+        <p id="76" l="1" u="0" r="76" d="0a000000ffff6203ffff6809ffffffff" a="" o=""/>
+        <p id="77" l="1" u="0" r="77" d="12000000ffff0213ffffffff1a6bffff" a="" o=""/>
+        <p id="78" l="1" u="0" r="78" d="12000000ffff1203ffffffff1a6bffff" a="" o=""/>
+        <p id="79" l="1" u="0" r="79" d="12000000ffff0213ffffffff6a1bffff" a="" o=""/>
+        <p id="80" l="1" u="0" r="80" d="12000000ffff1203ffffffff6a1bffff" a="" o=""/>
+        <p id="81" l="1" u="0" r="81" d="12000000ffff0263ffffffff0a6bffff" a="" o=""/>
+        <p id="82" l="1" u="0" r="82" d="12000000ffff6203ffffffff0a6bffff" a="" o=""/>
+        <p id="83" l="1" u="0" r="83" d="12000000ffff0263ffffffff6a0bffff" a="" o=""/>
+        <p id="84" l="1" u="0" r="84" d="12000000ffff6203ffffffff6a0bffff" a="" o=""/>
+        <p id="85" l="1" u="0" r="85" d="22000000ffff0213ffffffffffff1c6d" a="" o=""/>
+        <p id="86" l="1" u="0" r="86" d="22000000ffff1203ffffffffffff1c6d" a="" o=""/>
+        <p id="87" l="1" u="0" r="87" d="22000000ffff0213ffffffffffff6c1d" a="" o=""/>
+        <p id="88" l="1" u="0" r="88" d="22000000ffff1203ffffffffffff6c1d" a="" o=""/>
+        <p id="89" l="1" u="0" r="89" d="22000000ffff0263ffffffffffff0c6d" a="" o=""/>
+        <p id="90" l="1" u="0" r="90" d="22000000ffff6203ffffffffffff0c6d" a="" o=""/>
+        <p id="91" l="1" u="0" r="91" d="22000000ffff0263ffffffffffff6c0d" a="" o=""/>
+        <p id="92" l="1" u="0" r="92" d="22000000ffff6203ffffffffffff6c0d" a="" o=""/>
+        <p id="93" l="1" u="0" r="93" d="050000001061ffff0415ffffffffffff" a="" o=""/>
+        <p id="94" l="1" u="0" r="94" d="050000001061ffff0415ffffffffffff" a="" o=""/>
+        <p id="95" l="1" u="0" r="95" d="050000006011ffff0415ffffffffffff" a="" o=""/>
+        <p id="96" l="1" u="0" r="96" d="050000006011ffff1405ffffffffffff" a="" o=""/>
+        <p id="97" l="1" u="0" r="97" d="050000000061ffff0465ffffffffffff" a="" o=""/>
+        <p id="98" l="1" u="0" r="98" d="050000000061ffff6405ffffffffffff" a="" o=""/>
+        <p id="99" l="1" u="0" r="99" d="050000006001ffff0465ffffffffffff" a="" o=""/>
+        <p id="100" l="1" u="0" r="100" d="050000006001ffff6405ffffffffffff" a="" o=""/>
+        <p id="101" l="1" u="0" r="101" d="06000000ffff12630415ffffffffffff" a="" o=""/>
+        <p id="102" l="1" u="0" r="102" d="06000000ffff12631405ffffffffffff" a="" o=""/>
+        <p id="103" l="1" u="0" r="103" d="06000000ffff62130415ffffffffffff" a="" o=""/>
+        <p id="104" l="1" u="0" r="104" d="06000000ffff62131405ffffffffffff" a="" o=""/>
+        <p id="105" l="1" u="0" r="105" d="06000000ffff02630465ffffffffffff" a="" o=""/>
+        <p id="106" l="1" u="0" r="106" d="06000000ffff02636405ffffffffffff" a="" o=""/>
+        <p id="107" l="1" u="0" r="107" d="06000000ffff62030465ffffffffffff" a="" o=""/>
+        <p id="108" l="1" u="0" r="108" d="06000000ffff62036405ffffffffffff" a="" o=""/>
+        <p id="109" l="1" u="0" r="109" d="0c000000ffffffff04151869ffffffff" a="" o=""/>
+        <p id="110" l="1" u="0" r="110" d="0c000000ffffffff14051869ffffffff" a="" o=""/>
+        <p id="111" l="1" u="0" r="111" d="0c000000ffffffff04156819ffffffff" a="" o=""/>
+        <p id="112" l="1" u="0" r="112" d="0c000000ffffffff14056819ffffffff" a="" o=""/>
+        <p id="113" l="1" u="0" r="113" d="0c000000ffffffff04650869ffffffff" a="" o=""/>
+        <p id="114" l="1" u="0" r="114" d="0c000000ffffffff64050869ffffffff" a="" o=""/>
+        <p id="115" l="1" u="0" r="115" d="0c000000ffffffff04656809ffffffff" a="" o=""/>
+        <p id="116" l="1" u="0" r="116" d="0c000000ffffffff64056809ffffffff" a="" o=""/>
+        <p id="117" l="1" u="0" r="117" d="14000000ffffffff0415ffff1a6bffff" a="" o=""/>
+        <p id="118" l="1" u="0" r="118" d="14000000ffffffff1405ffff1a6bffff" a="" o=""/>
+        <p id="119" l="1" u="0" r="119" d="14000000ffffffff0415ffff6a1bffff" a="" o=""/>
+        <p id="120" l="1" u="0" r="120" d="14000000ffffffff1405ffff6a1bffff" a="" o=""/>
+        <p id="121" l="1" u="0" r="121" d="14000000ffffffff0465ffff0a6bffff" a="" o=""/>
+        <p id="122" l="1" u="0" r="122" d="14000000ffffffff6405ffff0a6bffff" a="" o=""/>
+        <p id="123" l="1" u="0" r="123" d="14000000ffffffff0465ffff6a0bffff" a="" o=""/>
+        <p id="124" l="1" u="0" r="124" d="14000000ffffffff6405ffff6a0bffff" a="" o=""/>
+        <p id="125" l="1" u="0" r="125" d="24000000ffffffff0415ffffffff1c6d" a="" o=""/>
+        <p id="126" l="1" u="0" r="126" d="24000000ffffffff1405ffffffff1c6d" a="" o=""/>
+        <p id="127" l="1" u="0" r="127" d="24000000ffffffff0415ffffffff6c1d" a="" o=""/>
+        <p id="128" l="1" u="0" r="128" d="24000000ffffffff1405ffffffff6c1d" a="" o=""/>
+        <p id="129" l="1" u="0" r="129" d="24000000ffffffff0465ffffffff0c6d" a="" o=""/>
+        <p id="130" l="1" u="0" r="130" d="24000000ffffffff6405ffffffff0c6d" a="" o=""/>
+        <p id="131" l="1" u="0" r="131" d="24000000ffffffff0465ffffffff6c0d" a="" o=""/>
+        <p id="132" l="1" u="0" r="132" d="24000000ffffffff6405ffffffff6c0d" a="" o=""/>
+        <p id="133" l="1" u="0" r="133" d="090000001061ffffffff0819ffffffff" a="" o=""/>
+        <p id="134" l="1" u="0" r="134" d="090000001061ffffffff0819ffffffff" a="" o=""/>
+        <p id="135" l="1" u="0" r="135" d="090000006011ffffffff0819ffffffff" a="" o=""/>
+        <p id="136" l="1" u="0" r="136" d="090000006011ffffffff1809ffffffff" a="" o=""/>
+        <p id="137" l="1" u="0" r="137" d="090000000061ffffffff0869ffffffff" a="" o=""/>
+        <p id="138" l="1" u="0" r="138" d="090000000061ffffffff6809ffffffff" a="" o=""/>
+        <p id="139" l="1" u="0" r="139" d="090000006001ffffffff0869ffffffff" a="" o=""/>
+        <p id="140" l="1" u="0" r="140" d="090000006001ffffffff6809ffffffff" a="" o=""/>
+        <p id="141" l="1" u="0" r="141" d="0a000000ffff1263ffff0819ffffffff" a="" o=""/>
+        <p id="142" l="1" u="0" r="142" d="0a000000ffff1263ffff1809ffffffff" a="" o=""/>
+        <p id="143" l="1" u="0" r="143" d="0a000000ffff6213ffff0819ffffffff" a="" o=""/>
+        <p id="144" l="1" u="0" r="144" d="0a000000ffff6213ffff1809ffffffff" a="" o=""/>
+        <p id="145" l="1" u="0" r="145" d="0a000000ffff0263ffff0869ffffffff" a="" o=""/>
+        <p id="146" l="1" u="0" r="146" d="0a000000ffff0263ffff6809ffffffff" a="" o=""/>
+        <p id="147" l="1" u="0" r="147" d="0a000000ffff6203ffff0869ffffffff" a="" o=""/>
+        <p id="148" l="1" u="0" r="148" d="0a000000ffff6203ffff6809ffffffff" a="" o=""/>
+        <p id="149" l="1" u="0" r="149" d="0c000000ffffffff14650819ffffffff" a="" o=""/>
+        <p id="150" l="1" u="0" r="150" d="0c000000ffffffff14651809ffffffff" a="" o=""/>
+        <p id="151" l="1" u="0" r="151" d="0c000000ffffffff64150819ffffffff" a="" o=""/>
+        <p id="152" l="1" u="0" r="152" d="0c000000ffffffff64151809ffffffff" a="" o=""/>
+        <p id="153" l="1" u="0" r="153" d="0c000000ffffffff04650869ffffffff" a="" o=""/>
+        <p id="154" l="1" u="0" r="154" d="0c000000ffffffff04656809ffffffff" a="" o=""/>
+        <p id="155" l="1" u="0" r="155" d="0c000000ffffffff64050869ffffffff" a="" o=""/>
+        <p id="156" l="1" u="0" r="156" d="0c000000ffffffff64056809ffffffff" a="" o=""/>
+        <p id="157" l="1" u="0" r="157" d="18000000ffffffffffff08494a6bffff" a="" o=""/>
+        <p id="158" l="1" u="0" r="158" d="18000000ffffffffffff18091a6bffff" a="" o=""/>
+        <p id="159" l="1" u="0" r="159" d="18000000ffffffffffff08196a1bffff" a="" o=""/>
+        <p id="160" l="1" u="0" r="160" d="18000000ffffffffffff18096a1bffff" a="" o=""/>
+        <p id="161" l="1" u="0" r="161" d="18000000ffffffffffff08690a6bffff" a="" o=""/>
+        <p id="162" l="1" u="0" r="162" d="18000000ffffffffffff68090a6bffff" a="" o=""/>
+        <p id="163" l="1" u="0" r="163" d="18000000ffffffffffff08696a0bffff" a="" o=""/>
+        <p id="164" l="1" u="0" r="164" d="18000000ffffffffffff68096a0bffff" a="" o=""/>
+        <p id="165" l="1" u="0" r="165" d="28000000ffffffffffff0819ffff1c6d" a="" o=""/>
+        <p id="166" l="1" u="0" r="166" d="28000000ffffffffffff1809ffff1c6d" a="" o=""/>
+        <p id="167" l="1" u="0" r="167" d="28000000ffffffffffff0819ffff6c1d" a="" o=""/>
+        <p id="168" l="1" u="0" r="168" d="28000000ffffffffffff1809ffff6c1d" a="" o=""/>
+        <p id="169" l="1" u="0" r="169" d="28000000ffffffffffff0869ffff0c6d" a="" o=""/>
+        <p id="170" l="1" u="0" r="170" d="28000000ffffffffffff6809ffff0c6d" a="" o=""/>
+        <p id="171" l="1" u="0" r="171" d="28000000ffffffffffff0869ffff6c0d" a="" o=""/>
+        <p id="172" l="1" u="0" r="172" d="28000000ffffffffffff6809ffff6c0d" a="" o=""/>
+        <p id="173" l="1" u="0" r="173" d="110000001061ffffffffffff0a1bffff" a="" o=""/>
+        <p id="174" l="1" u="0" r="174" d="110000001061ffffffffffff0a1bffff" a="" o=""/>
+        <p id="175" l="1" u="0" r="175" d="110000006011ffffffffffff0a1bffff" a="" o=""/>
+        <p id="176" l="1" u="0" r="176" d="110000006011ffffffffffff1a0bffff" a="" o=""/>
+        <p id="177" l="1" u="0" r="177" d="110000000061ffffffffffff0a6bffff" a="" o=""/>
+        <p id="178" l="1" u="0" r="178" d="110000000061ffffffffffff6a0bffff" a="" o=""/>
+        <p id="179" l="1" u="0" r="179" d="110000006001ffffffffffff0a6bffff" a="" o=""/>
+        <p id="180" l="1" u="0" r="180" d="110000006001ffffffffffff6a0bffff" a="" o=""/>
+        <p id="181" l="1" u="0" r="181" d="12000000ffff1263ffffffff0a1bffff" a="" o=""/>
+        <p id="182" l="1" u="0" r="182" d="12000000ffff1263ffffffff1a0bffff" a="" o=""/>
+        <p id="183" l="1" u="0" r="183" d="12000000ffff6213ffffffff0a1bffff" a="" o=""/>
+        <p id="184" l="1" u="0" r="184" d="12000000ffff6213ffffffff1a0bffff" a="" o=""/>
+        <p id="185" l="1" u="0" r="185" d="12000000ffff0263ffffffff0a6bffff" a="" o=""/>
+        <p id="186" l="1" u="0" r="186" d="12000000ffff0263ffffffff6a0bffff" a="" o=""/>
+        <p id="187" l="1" u="0" r="187" d="12000000ffff6203ffffffff0a6bffff" a="" o=""/>
+        <p id="188" l="1" u="0" r="188" d="12000000ffff6203ffffffff6a0bffff" a="" o=""/>
+        <p id="189" l="1" u="0" r="189" d="14000000ffffffff1465ffff0a1bffff" a="" o=""/>
+        <p id="190" l="1" u="0" r="190" d="14000000ffffffff1465ffff1a0bffff" a="" o=""/>
+        <p id="191" l="1" u="0" r="191" d="14000000ffffffff6415ffff0a1bffff" a="" o=""/>
+        <p id="192" l="1" u="0" r="192" d="14000000ffffffff6415ffff1a0bffff" a="" o=""/>
+        <p id="193" l="1" u="0" r="193" d="14000000ffffffff0465ffff0a6bffff" a="" o=""/>
+        <p id="194" l="1" u="0" r="194" d="14000000ffffffff0465ffff6a0bffff" a="" o=""/>
+        <p id="195" l="1" u="0" r="195" d="14000000ffffffff6405ffff0a6bffff" a="" o=""/>
+        <p id="196" l="1" u="0" r="196" d="14000000ffffffff6405ffff6a0bffff" a="" o=""/>
+        <p id="197" l="1" u="0" r="197" d="18000000ffffffffffff18690a1bffff" a="" o=""/>
+        <p id="198" l="1" u="0" r="198" d="18000000ffffffffffff18691a0bffff" a="" o=""/>
+        <p id="199" l="1" u="0" r="199" d="18000000ffffffffffff68190a1bffff" a="" o=""/>
+        <p id="200" l="1" u="0" r="200" d="18000000ffffffffffff68191a0bffff" a="" o=""/>
+        <p id="201" l="1" u="0" r="201" d="18000000ffffffffffff08690a6bffff" a="" o=""/>
+        <p id="202" l="1" u="0" r="202" d="18000000ffffffffffff08696a0bffff" a="" o=""/>
+        <p id="203" l="1" u="0" r="203" d="18000000ffffffffffff68090a6bffff" a="" o=""/>
+        <p id="204" l="1" u="0" r="204" d="18000000ffffffffffff68096a0bffff" a="" o=""/>
+        <p id="205" l="1" u="0" r="205" d="30000000ffffffffffffffff0a1b1c6d" a="" o=""/>
+        <p id="206" l="1" u="0" r="206" d="30000000ffffffffffffffff1a0b1c6d" a="" o=""/>
+        <p id="207" l="1" u="0" r="207" d="30000000ffffffffffffffff0a1b6c1d" a="" o=""/>
+        <p id="208" l="1" u="0" r="208" d="30000000ffffffffffffffff1a0b6c1d" a="" o=""/>
+        <p id="209" l="1" u="0" r="209" d="30000000ffffffffffffffff0a6b0c6d" a="" o=""/>
+        <p id="210" l="1" u="0" r="210" d="30000000ffffffffffffffff6a0b0c6d" a="" o=""/>
+        <p id="211" l="1" u="0" r="211" d="30000000ffffffffffffffff0a6b6c0d" a="" o=""/>
+        <p id="212" l="1" u="0" r="212" d="30000000ffffffffffffffff6a0b6c0d" a="" o=""/>
+        <p id="213" l="1" u="0" r="213" d="210000001061ffffffffffffffff0c1d" a="" o=""/>
+        <p id="214" l="1" u="0" r="214" d="210000001061ffffffffffffffff0c1d" a="" o=""/>
+        <p id="215" l="1" u="0" r="215" d="210000006011ffffffffffffffff0c1d" a="" o=""/>
+        <p id="216" l="1" u="0" r="216" d="210000006011ffffffffffffffff1c0d" a="" o=""/>
+        <p id="217" l="1" u="0" r="217" d="210000000061ffffffffffffffff0c6d" a="" o=""/>
+        <p id="218" l="1" u="0" r="218" d="210000000061ffffffffffffffff6c0d" a="" o=""/>
+        <p id="219" l="1" u="0" r="219" d="210000006001ffffffffffffffff0c6d" a="" o=""/>
+        <p id="220" l="1" u="0" r="220" d="210000006001ffffffffffffffff6c0d" a="" o=""/>
+        <p id="221" l="1" u="0" r="221" d="22000000ffff1263ffffffffffff0c1d" a="" o=""/>
+        <p id="222" l="1" u="0" r="222" d="22000000ffff1263ffffffffffff1c0d" a="" o=""/>
+        <p id="223" l="1" u="0" r="223" d="22000000ffff6213ffffffffffff0c1d" a="" o=""/>
+        <p id="224" l="1" u="0" r="224" d="22000000ffff6213ffffffffffff1c0d" a="" o=""/>
+        <p id="225" l="1" u="0" r="225" d="22000000ffff0263ffffffffffff0c6d" a="" o=""/>
+        <p id="226" l="1" u="0" r="226" d="22000000ffff0263ffffffffffff6c0d" a="" o=""/>
+        <p id="227" l="1" u="0" r="227" d="22000000ffff6203ffffffffffff0c6d" a="" o=""/>
+        <p id="228" l="1" u="0" r="228" d="22000000ffff6203ffffffffffff6c0d" a="" o=""/>
+        <p id="229" l="1" u="0" r="229" d="24000000ffffffff1465ffffffff0c1d" a="" o=""/>
+        <p id="230" l="1" u="0" r="230" d="24000000ffffffff1465ffffffff1c0d" a="" o=""/>
+        <p id="231" l="1" u="0" r="231" d="24000000ffffffff6415ffffffff0c1d" a="" o=""/>
+        <p id="232" l="1" u="0" r="232" d="24000000ffffffff6415ffffffff1c0d" a="" o=""/>
+        <p id="233" l="1" u="0" r="233" d="24000000ffffffff0465ffffffff0c6d" a="" o=""/>
+        <p id="234" l="1" u="0" r="234" d="24000000ffffffff0465ffffffff6c0d" a="" o=""/>
+        <p id="235" l="1" u="0" r="235" d="24000000ffffffff6405ffffffff0c6d" a="" o=""/>
+        <p id="236" l="1" u="0" r="236" d="24000000ffffffff6405ffffffff6c0d" a="" o=""/>
+        <p id="237" l="1" u="0" r="237" d="28000000ffffffffffff1869ffff0c1d" a="" o=""/>
+        <p id="238" l="1" u="0" r="238" d="28000000ffffffffffff1869ffff1c0d" a="" o=""/>
+        <p id="239" l="1" u="0" r="239" d="28000000ffffffffffff6819ffff0c1d" a="" o=""/>
+        <p id="240" l="1" u="0" r="240" d="28000000ffffffffffff6819ffff1c0d" a="" o=""/>
+        <p id="241" l="1" u="0" r="241" d="28000000ffffffffffff0869ffff0c6d" a="" o=""/>
+        <p id="242" l="1" u="0" r="242" d="28000000ffffffffffff0869ffff6c0d" a="" o=""/>
+        <p id="243" l="1" u="0" r="243" d="28000000ffffffffffff6809ffff0c6d" a="" o=""/>
+        <p id="244" l="1" u="0" r="244" d="28000000ffffffffffff6809ffff6c0d" a="" o=""/>
+        <p id="245" l="1" u="0" r="245" d="30000000ffffffffffffffff1a6b0c1d" a="" o=""/>
+        <p id="246" l="1" u="0" r="246" d="30000000ffffffffffffffff1a6b1c0d" a="" o=""/>
+        <p id="247" l="1" u="0" r="247" d="30000000ffffffffffffffff6a1b0c1d" a="" o=""/>
+        <p id="248" l="1" u="0" r="248" d="30000000ffffffffffffffff6a1b1c0d" a="" o=""/>
+        <p id="249" l="1" u="0" r="249" d="30000000ffffffffffffffff0a6b0c6d" a="" o=""/>
+        <p id="250" l="1" u="0" r="250" d="30000000ffffffffffffffff0a6b6c0d" a="" o=""/>
+        <p id="251" l="1" u="0" r="251" d="30000000ffffffffffffffff6a0b0c6d" a="" o=""/>
+        <p id="252" l="1" u="0" r="252" d="30000000ffffffffffffffff6a0b6c0d" a="" o=""/>
+        <p id="253" l="1" u="0" r="253" d="07000000001112631465ffffffffffff" a="" o=""/>
+        <p id="254" l="1" u="0" r="254" d="07000000001112630465ffffffffffff" a="" o=""/>
+        <p id="255" l="1" u="0" r="255" d="07000000006102232465ffffffffffff" a="" o=""/>
+        <p id="256" l="1" u="0" r="256" d="07000000001102131465ffffffffffff" a="" o=""/>
+        <p id="257" l="1" u="0" r="257" d="07000000006102630465ffffffffffff" a="" o=""/>
+        <p id="258" l="1" u="0" r="258" d="0f0000000011126304252869ffffffff" a="" o=""/>
+        <p id="259" l="1" u="0" r="259" d="0f0000000061026304650869ffffffff" a="" o=""/>
+        <p id="260" l="1" u="0" r="260" d="3f00000000111223243538494a5b5c6d" a="" o=""/>
+        <p id="261" l="1" u="0" r="261" d="40000000ffffffffffffffffffffffff" a="" o=""/>
+        <p id="262" l="1" u="0" r="262" d="80000000ffffffffffffffffffffffff" a="MUTE" o=""/>
+        <p id="263" l="1" u="0" r="263" d="0f0000000011021314651869ffffffff" a="" o=""/>
+        <p id="264" l="1" u="0" r="264" d="0e000000ffff026304252869ffffffff" a="" o=""/>
+        <p id="265" l="1" u="0" r="265" d="07000000100112631465ffffffffffff" a="" o=""/>
+        <p id="266" l="1" u="0" r="266" d="07000000100112630465ffffffffffff" a="" o=""/>
+        <p id="267" l="1" u="0" r="267" d="07000000600102232465ffffffffffff" a="" o=""/>
+        <p id="268" l="1" u="0" r="268" d="07000000100102131465ffffffffffff" a="" o=""/>
+        <p id="269" l="1" u="0" r="269" d="07000000600102630465ffffffffffff" a="" o=""/>
+        <p id="271" l="1" u="0" r="271" d="07000000001162130465ffffffffffff" a="" o=""/>
+        <p id="272" l="1" u="0" r="272" d="07000000006122032465ffffffffffff" a="" o=""/>
+        <p id="273" l="1" u="0" r="273" d="07000000001112031465ffffffffffff" a="" o=""/>
+        <p id="274" l="1" u="0" r="274" d="07000000006162030465ffffffffffff" a="" o=""/>
+        <p id="275" l="1" u="0" r="275" d="07000000001112636415ffffffffffff" a="" o=""/>
+        <p id="276" l="1" u="0" r="276" d="07000000001112636405ffffffffffff" a="" o=""/>
+        <p id="277" l="1" u="0" r="277" d="07000000006102236425ffffffffffff" a="" o=""/>
+        <p id="278" l="1" u="0" r="278" d="07000000001102136415ffffffffffff" a="" o=""/>
+        <p id="279" l="1" u="0" r="279" d="07000000006102636405ffffffffffff" a="" o=""/>
+        <p id="280" l="1" u="0" r="280" d="0f0000000011126304151869ffffffff" a="" o=""/>
+        <p id="281" l="1" u="0" r="281" d="0b00000000111263ffff0869ffffffff" a="" o=""/>
+        <p id="282" l="1" u="0" r="282" d="0b00000000610263ffff0869ffffffff" a="" o=""/>
+        <p id="283" l="1" u="0" r="283" d="0f0000000011126304650869ffffffff" a="" o=""/>
+        <p id="284" l="1" u="0" r="284" d="3c000000ffffffff041518690a3b3c6d" a="" o=""/>
+        <p id="285" l="1" u="0" r="285" d="3f00000000111263043538690a4b4c6d" a="" o=""/>
+        <p id="286" l="1" u="0" r="286" d="3f00000000610263046508690a6b0c6d" a="" o=""/>
+        <p id="287" l="1" u="0" r="287" d="1b00000000111263ffff08494a6bffff" a="" o=""/>
+        <p id="288" l="1" u="0" r="288" d="1c000000ffffffff046508191a6bffff" a="" o=""/>
+        <p id="289" l="1" u="0" r="300" d="150000000061ffff0465ffff0a6bffff" a="" o=""/>
+        <p id="290" l="1" u="0" r="301" d="1f00000030610233443548694a0bffff" a="" o=""/>
+        <p id="291" l="1" u="0" r="302" d="0d0000000061ffff04353869ffffffff" a="" o=""/>
+        <p id="292" l="1" u="0" r="303" d="0d0000000061ffff04650869ffffffff" a="" o=""/>
+        <p id="293" l="1" u="0" r="304" d="1f00000000610263046508690a6bffff" a="" o=""/>
+        <p id="294" l="1" u="0" r="305" d="0f0000001001126304252869ffffffff" a="" o=""/>
+        <p id="295" l="1" u="0" r="306" d="0f0000001001122324353869ffffffff" a="" o=""/>
+        <p id="296" l="1" u="0" r="307" d="17000000100112636405ffff6a1bffff" a="" o=""/>
+        <p id="297" l="1" u="0" r="308" d="1300000020612263ffffffff0a2bffff" a="" o=""/>
+        <p id="298" l="1" u="0" r="309" d="0e000000ffff021304651869ffffffff" a="" o=""/>
+        <p id="299" l="1" u="0" r="310" d="0b00000020612263ffff0829ffffffff" a="" o=""/>
+        <p id="300" l="1" u="0" r="311" d="0f0000006001021314650819ffffffff" a="" o=""/>
+        <p id="301" l="1" u="0" r="312" d="1f00000000510223246528095a6bffff" a="" o=""/>
+        <p id="302" l="1" u="0" r="313" d="0f0000000011123334555869ffffffff" a="" o=""/>
+        <p id="303" l="1" u="0" r="314" d="0a000000ffff0263ffff0869ffffffff" a="" o=""/>
+        <p id="304" l="1" u="0" r="315" d="0c000000ffffffff64150819ffffffff" a="" o=""/>
+        <p id="305" l="1" u="0" r="316" d="090000006001ffffffff6809ffffffff" a="" o=""/>
+        <p id="306" l="1" u="0" r="317" d="090000001001ffffffff1869ffffffff" a="" o=""/>
+        <p id="307" l="1" u="0" r="318" d="0f0000006001026304650869ffffffff" a="" o=""/>
+        <p id="308" l="1" u="0" r="319" d="0f0000006001026304650869ffffffff" a="" o=""/>
+        <p id="309" l="1" u="0" r="320" d="0f0000006001026304650869ffffffff" a="" o=""/>
+        <p id="310" l="1" u="0" r="321" d="090000006001ffffffff0869ffffffff" a="" o=""/>
+        <p id="311" l="1" u="0" r="322" d="1f00000000111223244548595a6bffff" a="" o=""/>
+        <p id="312" l="1" u="0" r="323" d="0300000000610263ffffffffffffffff" a="" o="StingRay-ish *Bring down Mids"/>
+        <p id="313" l="2" u="0" r="324" d="0300000000111263ffffffffffffffff" a="Tony Levin 1s2" o=""/>
+        <p id="314" l="2" u="0" r="325" d="0300000000610263ffffffffffffffff" a="1p2" o="StingRay-ish *Bring doen Mids"/>
+        <p id="315" l="2" u="0" r="326" d="02000000ffff0263ffffffffffffffff" a="2" o="Jazz Bass *Increase low end"/>
+        <p id="316" l="2" u="0" r="327" d="0b00000000610263ffff0869ffffffff" a="1p2p4" o="StingRay &amp;"/>
+        <p id="317" l="2" u="0" r="328" d="0c000000ffffffff04650869ffffffff" a="3p4" o="Big Boom &amp;"/>
+        <p id="318" l="2" u="0" r="329" d="08000000ffffffffffff0869ffffffff" a="4" o="Big Boom"/>
+        <p id="319" l="2" u="0" r="330" d="0300000000610263ffffffffffffffff" a="Tony Levin 1p2" o="StingRay-ish *Bring down mids"/>
+        <p id="320" l="2" u="0" r="331" d="02000000ffff0263ffffffffffffffff" a="Tony Levin 2" o="Jazz Bass *Increase low end"/>
+        <p id="321" l="2" u="0" r="332" d="0b00000000610263ffff0869ffffffff" a="Tony Levin 1p2p4" o="StingRay &amp;"/>
+        <p id="322" l="2" u="0" r="333" d="0c000000ffffffff04650869ffffffff" a="Tony Levin 3p4" o="Big Boom &amp;"/>
+        <p id="323" l="2" u="0" r="334" d="02000000ffff0263ffffffffffffffff" a="Tony Levin 2" o="Big Boom"/>
+        <p id="1473" l="1" u="0" r="335" d="0300000000111253ffffffffffffffff" a="" o="13 in 5 column "/>
+        <p id="1474" l="1" u="0" r="336" d="0f0000000011125304252859ffffffff" a="" o="29 in 5 column"/>
+        <p id="1475" l="1" u="0" r="337" d="0c000000ffffffff04151859ffffffff" a="" o="258 in 5 column"/>
+        <p id="1476" l="1" u="0" r="338" d="0300000000111253ffffffffffffffff" a="" o="261 in 5 column "/>
+        <p id="1477" l="1" u="0" r="339" d="06000000ffff02530455ffffffffffff" a="" o="33 in 5 column"/>
+        <p id="1478" l="1" u="0" r="340" d="0c000000ffffffff04151859ffffffff" a="" o="259 in 5 column "/>
+    </presets>
+    <banks>
+        <b id="1" l="1" u="0" r="9" m="1" c="5" z="0" a="Bass HH Bank A (Active)" o="">
+            <p r="13"/>
+            <p r="33"/>
+            <p r="258"/>
+            <p r="65"/>
+            <p r="109"/>
+        </b>
+        <b id="2" l="1" u="0" r="7" m="2" c="5" z="0" a="Guitar HH Bank A" o="">
+            <p r="13"/>
+            <p r="29"/>
+            <p r="258"/>
+            <p r="61"/>
+            <p r="109"/>
+        </b>
+        <b id="3" l="1" u="0" r="8" m="2" c="5" z="0" a="Guitar HH Bank B" o="">
+            <p r="17"/>
+            <p r="33"/>
+            <p r="259"/>
+            <p r="65"/>
+            <p r="113"/>
+        </b>
+        <b id="4" l="1" u="0" r="3" m="2" c="15" z="1" a="Guitar HH Bank Z" o="">
+            <p r="1"/>
+            <p r="3"/>
+            <p r="5"/>
+            <p r="7"/>
+            <p r="13"/>
+            <p r="17"/>
+            <p r="29"/>
+            <p r="33"/>
+            <p r="61"/>
+            <p r="65"/>
+            <p r="109"/>
+            <p r="113"/>
+            <p r="258"/>
+            <p r="259"/>
+            <p r="262"/>
+        </b>
+        <b id="5" l="1" u="0" r="4" m="3" c="15" z="1" a="Guitar HHP Bank Z" o="">
+            <p r="1"/>
+            <p r="3"/>
+            <p r="5"/>
+            <p r="7"/>
+            <p r="13"/>
+            <p r="17"/>
+            <p r="29"/>
+            <p r="33"/>
+            <p r="61"/>
+            <p r="65"/>
+            <p r="109"/>
+            <p r="113"/>
+            <p r="258"/>
+            <p r="259"/>
+            <p r="262"/>
+        </b>
+        <b id="6" l="1" u="0" r="10" m="1" c="5" z="0" a="Bass HH Bank B (Passive)" o="">
+            <p r="13"/>
+            <p r="33"/>
+            <p r="258"/>
+            <p r="65"/>
+            <p r="109"/>
+        </b>
+        <b id="13" l="1" u="0" r="1" m="3" c="5" z="0" a="Guitar HHP Bank A" o="">
+            <p r="13"/>
+            <p r="29"/>
+            <p r="258"/>
+            <p r="61"/>
+            <p r="109"/>
+        </b>
+        <b id="14" l="1" u="0" r="5" m="1" c="15" z="1" a="Bass HH Bank Z " o="">
+            <p r="1"/>
+            <p r="3"/>
+            <p r="5"/>
+            <p r="7"/>
+            <p r="13"/>
+            <p r="17"/>
+            <p r="29"/>
+            <p r="33"/>
+            <p r="61"/>
+            <p r="65"/>
+            <p r="109"/>
+            <p r="113"/>
+            <p r="258"/>
+            <p r="259"/>
+            <p r="262"/>
+        </b>
+        <b id="15" l="1" u="0" r="93" m="5" c="5" z="1" a="Guitar HSHP Bank A" o="">
+            <p r="13"/>
+            <p r="41"/>
+            <p r="287"/>
+            <p r="73"/>
+            <p r="157"/>
+        </b>
+        <b id="16" l="1" u="0" r="94" m="5" c="5" z="0" a="Guitar HSHP Bank B" o="">
+            <p r="261"/>
+            <p r="65"/>
+            <p r="5"/>
+            <p r="121"/>
+            <p r="9"/>
+        </b>
+        <b id="17" l="1" u="0" r="95" m="5" c="15" z="1" a="Guitar HSHP Bank Z" o="">
+            <p r="1"/>
+            <p r="3"/>
+            <p r="5"/>
+            <p r="7"/>
+            <p r="9"/>
+            <p r="13"/>
+            <p r="17"/>
+            <p r="41"/>
+            <p r="65"/>
+            <p r="73"/>
+            <p r="121"/>
+            <p r="157"/>
+            <p r="161"/>
+            <p r="287"/>
+            <p r="262"/>
+        </b>
+        <b id="47" l="1" u="0" r="2" m="3" c="5" z="0" a="Guitar HHP Bank B" o="">
+            <p r="261"/>
+            <p r="33"/>
+            <p r="259"/>
+            <p r="65"/>
+            <p r="113"/>
+        </b>
+        <b id="55" l="1" u="0" r="318" m="4" c="15" z="1" a="Guitar HSH Bank Z" o="">
+            <p r="1"/>
+            <p r="3"/>
+            <p r="5"/>
+            <p r="7"/>
+            <p r="9"/>
+            <p r="13"/>
+            <p r="17"/>
+            <p r="41"/>
+            <p r="65"/>
+            <p r="73"/>
+            <p r="121"/>
+            <p r="157"/>
+            <p r="161"/>
+            <p r="287"/>
+            <p r="262"/>
+        </b>
+        <b id="56" l="1" u="0" r="319" m="4" c="5" z="0" a="Guitar HSH Bank B" o="">
+            <p r="3"/>
+            <p r="65"/>
+            <p r="5"/>
+            <p r="121"/>
+            <p r="9"/>
+        </b>
+        <b id="57" l="1" u="0" r="320" m="4" c="5" z="0" a="Guitar HSH Bank A" o="">
+            <p r="13"/>
+            <p r="41"/>
+            <p r="287"/>
+            <p r="73"/>
+            <p r="157"/>
+        </b>
+        <b id="161" l="1" u="0" r="334" m="6" c="3" z="0" a="Majesty Bank A" o="">
+            <p r="335"/>
+            <p r="336"/>
+            <p r="337"/>
+        </b>
+        <b id="162" l="1" u="0" r="335" m="6" c="3" z="0" a="Majesty Bank B" o="">
+            <p r="338"/>
+            <p r="339"/>
+            <p r="340"/>
+        </b>
+        <b id="163" l="1" u="0" r="336" m="6" c="15" z="1" a="No Bank Available" o="">
+            <p r="262"/>
+            <p r="262"/>
+            <p r="262"/>
+            <p r="262"/>
+            <p r="262"/>
+            <p r="262"/>
+            <p r="262"/>
+            <p r="262"/>
+            <p r="262"/>
+            <p r="262"/>
+            <p r="262"/>
+            <p r="262"/>
+            <p r="262"/>
+            <p r="262"/>
+            <p r="262"/>
+        </b>
+        <b id="18" l="2" u="0" r="100" m="1" c="5" z="0" a="Tony Levin Bank 1" o="">
+            <p r="330"/>
+            <p r="331"/>
+            <p r="332"/>
+            <p r="333"/>
+            <p r="334"/>
+        </b>
+        <b id="19" l="2" u="0" r="101" m="1" c="5" z="0" a="Tony Levin Bank 2" o="">
+            <p r="324"/>
+            <p r="305"/>
+            <p r="109"/>
+            <p r="254"/>
+            <p r="7"/>
+        </b>
+        <b id="20" l="2" u="0" r="102" m="2" c="5" z="0" a="Steve Morse Y2D Bank" o="">
+            <p r="13"/>
+            <p r="254"/>
+            <p r="3"/>
+            <p r="258"/>
+            <p r="109"/>
+        </b>
+        <b id="22" l="2" u="0" r="104" m="2" c="5" z="0" a="Jay Graydon Bank 1" o="">
+            <p r="264"/>
+            <p r="29"/>
+            <p r="258"/>
+            <p r="134"/>
+            <p r="266"/>
+        </b>
+        <b id="23" l="2" u="0" r="105" m="1" c="5" z="0" a="Dave LaRue Passive Bank" o="">
+            <p r="5"/>
+            <p r="7"/>
+            <p r="21"/>
+            <p r="109"/>
+            <p r="93"/>
+        </b>
+        <b id="24" l="2" u="0" r="106" m="1" c="5" z="0" a="Dave LaRue Active Bank" o="">
+            <p r="1"/>
+            <p r="13"/>
+            <p r="258"/>
+            <p r="109"/>
+            <p r="17"/>
+        </b>
+        <b id="25" l="2" u="0" r="107" m="1" c="5" z="0" a="Craig Young Bank 1" o="">
+            <p r="1"/>
+            <p r="33"/>
+            <p r="258"/>
+            <p r="65"/>
+            <p r="109"/>
+        </b>
+        <b id="27" l="2" u="0" r="109" m="2" c="5" z="0" a="Blues Saraceno Bank 1" o="">
+            <p r="13"/>
+            <p r="175"/>
+            <p r="95"/>
+            <p r="109"/>
+            <p r="322"/>
+        </b>
+        <b id="28" l="2" u="0" r="110" m="3" c="5" z="0" a="Travis Larson Bank 1" o="">
+            <p r="13"/>
+            <p r="33"/>
+            <p r="258"/>
+            <p r="65"/>
+            <p r="109"/>
+        </b>
+        <b id="29" l="2" u="0" r="111" m="3" c="5" z="0" a="Travis Larson Bank 2" o="">
+            <p r="261"/>
+            <p r="261"/>
+            <p r="261"/>
+            <p r="261"/>
+            <p r="261"/>
+        </b>
+        <b id="30" l="2" u="0" r="112" m="4" c="5" z="0" a="LUKE Bank 1" o="">
+            <p r="13"/>
+            <p r="254"/>
+            <p r="5"/>
+            <p r="121"/>
+            <p r="9"/>
+        </b>
+        <b id="31" l="2" u="0" r="113" m="3" c="5" z="0" a="John Petrucci Bank 1" o="">
+            <p r="13"/>
+            <p r="33"/>
+            <p r="258"/>
+            <p r="65"/>
+            <p r="109"/>
+        </b>
+        <b id="32" l="2" u="0" r="114" m="3" c="5" z="0" a="John Petrucci Bank 2" o="">
+            <p r="13"/>
+            <p r="14"/>
+            <p r="261"/>
+            <p r="110"/>
+            <p r="109"/>
+        </b>
+        <b id="51" l="2" u="0" r="313" m="2" c="5" z="0" a="Steve Morse Bank" o="">
+            <p r="314"/>
+            <p r="315"/>
+            <p r="316"/>
+            <p r="317"/>
+            <p r="319"/>
+        </b>
+        <b id="26" l="3" u="0" r="200" m="3" c="5" z="0" a="British Invasion Guitar" o="">
+            <p r="13"/>
+            <p r="310"/>
+            <p r="258"/>
+            <p r="309"/>
+            <p r="109"/>
+        </b>
+        <b id="33" l="3" u="0" r="201" m="3" c="5" z="0" a="Classic Rock Guitar" o="">
+            <p r="13"/>
+            <p r="7"/>
+            <p r="199"/>
+            <p r="258"/>
+            <p r="109"/>
+        </b>
+        <b id="34" l="3" u="0" r="307" m="1" c="5" z="0" a="Funk Bass" o="">
+            <p r="17"/>
+            <p r="258"/>
+            <p r="3"/>
+            <p r="7"/>
+            <p r="259"/>
+        </b>
+        <b id="35" l="3" u="0" r="203" m="4" c="5" z="0" a="Alternative Guitar" o="">
+            <p r="1"/>
+            <p r="13"/>
+            <p r="311"/>
+            <p r="312"/>
+            <p r="109"/>
+        </b>
+        <b id="36" l="3" u="0" r="311" m="1" c="5" z="0" a="Jazz Bass" o="">
+            <p r="1"/>
+            <p r="113"/>
+            <p r="61"/>
+            <p r="5"/>
+            <p r="305"/>
+        </b>
+        <b id="37" l="3" u="0" r="205" m="4" c="5" z="0" a="Modern Rock Guitar" o="">
+            <p r="1"/>
+            <p r="13"/>
+            <p r="287"/>
+            <p r="5"/>
+            <p r="157"/>
+        </b>
+        <b id="38" l="3" u="0" r="206" m="2" c="5" z="0" a="Punk Guitar" o="">
+            <p r="1"/>
+            <p r="13"/>
+            <p r="14"/>
+            <p r="313"/>
+            <p r="109"/>
+        </b>
+        <b id="39" l="3" u="0" r="207" m="4" c="5" z="0" a="Reggae Guitar" o="">
+            <p r="1"/>
+            <p r="13"/>
+            <p r="14"/>
+            <p r="27"/>
+            <p r="300"/>
+        </b>
+        <b id="40" l="3" u="0" r="208" m="5" c="5" z="0" a="Folk Guitar" o="">
+            <p r="261"/>
+            <p r="261"/>
+            <p r="261"/>
+            <p r="261"/>
+            <p r="261"/>
+        </b>
+        <b id="41" l="3" u="0" r="209" m="5" c="5" z="0" a="Country Guitar" o="">
+            <p r="13"/>
+            <p r="33"/>
+            <p r="281"/>
+            <p r="300"/>
+            <p r="261"/>
+        </b>
+        <b id="42" l="3" u="0" r="210" m="5" c="5" z="0" a="Delta Blues Gutar" o="">
+            <p r="261"/>
+            <p r="307"/>
+            <p r="300"/>
+            <p r="304"/>
+            <p r="258"/>
+        </b>
+        <b id="43" l="3" u="0" r="211" m="4" c="5" z="0" a="Rock Blues Guitar" o="">
+            <p r="13"/>
+            <p r="9"/>
+            <p r="300"/>
+            <p r="121"/>
+            <p r="157"/>
+        </b>
+        <b id="46" l="3" u="0" r="215" m="2" c="5" z="0" a="Jazz Guitar" o="">
+            <p r="258"/>
+            <p r="109"/>
+            <p r="266"/>
+            <p r="302"/>
+            <p r="303"/>
+        </b>
+        <b id="48" l="3" u="0" r="213" m="4" c="5" z="0" a="Funk Gutiar" o="">
+            <p r="25"/>
+            <p r="304"/>
+            <p r="282"/>
+            <p r="33"/>
+            <p r="300"/>
+        </b>
+        <b id="49" l="3" u="0" r="310" m="1" c="5" z="0" a="Rock Bass" o="">
+            <p r="13"/>
+            <p r="109"/>
+            <p r="25"/>
+            <p r="7"/>
+            <p r="306"/>
+        </b>
+        <b id="50" l="3" u="0" r="304" m="4" c="5" z="0" a="Metal Guitar" o="">
+            <p r="13"/>
+            <p r="9"/>
+            <p r="157"/>
+            <p r="41"/>
+            <p r="301"/>
+        </b>
+    </banks>
+    <schemes>
+        <s id="1" l="1" u="0" r="9" m="2" c="3" a="Reflex Guitar HH" o="">
+            <b r="7"/>
+            <b r="8"/>
+            <b r="3"/>
+        </s>
+        <s id="2" l="1" u="0" r="8" m="1" c="3" a="Reflex Bass HH" o="">
+            <b r="9"/>
+            <b r="10"/>
+            <b r="5"/>
+        </s>
+        <s id="3" l="1" u="0" r="5" m="3" c="3" a="Reflex Guitar HHP" o="">
+            <b r="1"/>
+            <b r="2"/>
+            <b r="4"/>
+        </s>
+        <s id="4" l="1" u="0" r="51" m="5" c="3" a="Reflex Guitar HSHP" o="">
+            <b r="93"/>
+            <b r="94"/>
+            <b r="95"/>
+        </s>
+        <s id="12" l="1" u="0" r="104" m="4" c="3" a="Reflex Guitar HSH" o="">
+            <b r="320"/>
+            <b r="319"/>
+            <b r="318"/>
+        </s>
+        <s id="49" l="1" u="0" r="333" m="6" c="3" a="Majesty Guitar HHP" o="">
+            <b r="334"/>
+            <b r="335"/>
+            <b r="336"/>
+        </s>
+    </schemes>
+</library>

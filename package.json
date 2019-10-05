@@ -1,0 +1,22 @@
+{
+  "name": "gamechanger",
+  "version": "0.0.1",
+  "description": "The Gamechanger",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "rebuild": "electron-rebuild -f -w usb"
+  },
+  "keywords": [
+    "gamechanger",
+    "ernie ball"
+  ],
+  "repository": "https://github.com/edwillys/gamechanger/",
+  "author": "Edgar Lubicz",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^5.0.10",
+    "electron-rebuild": "^1.8.6",
+    "usb": "^1.6.0"
+  }
+}

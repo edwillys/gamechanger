@@ -1,0 +1,394 @@
+abbr,acronym {
+    border: 0
+}
+
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-style: normal;
+    font-weight: normal
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+    margin: 0;
+    padding: 0
+}
+
+caption,th {
+    text-align: left
+}
+
+fieldset,img {
+    border: 0
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+ol,ul {
+    list-style: none
+}
+
+q:before,q:after {
+    content: ''
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+body {
+    font-family: "Helvetica","Arial","sans-serif";
+    color: #fff;
+    font-size: 10pt
+}
+
+a:link,a:visited {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none
+}
+
+a:hover {
+    color: #5e8bb2
+}
+
+a:link.sublinks,a:visited.sublinks {
+    color: #fff;
+    font-size: 10pt;
+    font-weight: bold;
+    text-decoration: none
+}
+
+a:hover.sublinks {
+    color: #ff0
+}
+
+a.white:link,a.white:active,a.white:visited {
+    color: #fff;
+    text-decoration: none
+}
+
+a.white:hover {
+    color: #fff
+}
+
+div#tooltip {
+    padding: 3px;
+    border: 1px solid #535353;
+    display: none;
+    background: #333;
+    color: #fff;
+    position: absolute;
+    z-index: 999
+}
+
+#global_container {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: -6px
+}
+
+#header_container {
+    height: 66px;
+    margin: 10px 0 10px 0;
+    width: 1000px
+}
+
+#header_left {
+    float: left;
+    height: 66px;
+    width: 120px
+}
+
+#header_right {
+    float: left;
+    height: 66px;
+    width: 880px
+}
+
+#header_right_top {
+    height: 39px;
+    text-align: right;
+    width: 880px
+}
+
+#header_right_bot {
+    height: 27px;
+    width: 880px
+}
+
+.header_ebmm {
+    margin-left: 15px
+}
+
+.header_links {
+    background-image: url(../static/links2.png);
+    float: left;
+    height: 9px;
+    margin: 10px 0 0 30px
+}
+
+#header_link_1 {
+    background-position: 0 0;
+    width: 161px
+}
+
+#header_link_1:hover {
+    background-position: 0 -9px
+}
+
+#header_link_2 {
+    background-position: 0 -18px;
+    width: 78px
+}
+
+#header_link_2:hover {
+    background-position: 0 -27px
+}
+
+#header_link_3 {
+    background-position: 0 -36px;
+    width: 83px
+}
+
+#header_link_3:hover {
+    background-position: 0 -45px
+}
+
+#header_link_4 {
+    background-position: 0 -54px;
+    width: 114px
+}
+
+#header_link_4:hover {
+    background-position: 0 -63px
+}
+
+#header_link_5 {
+    background-position: 0 -72px;
+    width: 56px
+}
+
+#header_link_5:hover {
+    background-position: 0 -81px
+}
+
+#header_sub {
+    border: 1px solid #fff;
+    background: url(../static/bar_bg.png);
+    height: 25px;
+    width: 848px;
+    margin-left: 30px
+}
+
+.header_sub_app {
+    display: block
+}
+
+.header_sub_help {
+    display: none
+}
+
+#header_sub_left {
+    float: left;
+    padding-left: 10px;
+    height: 25px;
+    line-height: 25px;
+    width: 414px
+}
+
+#header_sub_left a {
+    margin-left: 10px
+}
+
+#header_sub_right {
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    padding-right: 10px;
+    text-align: right;
+    width: 414px
+}
+
+#foot_container {
+    border: 1px solid #fff;
+    background: url(../static/bar_bg.png);
+    font-size: 10pt;
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    width: 998px
+}
+
+#hourglass {
+    z-index: 1000;
+    width: 16px;
+    height: 16px;
+    background: url(../static/ajax-loader.gif)
+}
+
+#loading {
+    z-index: 1000
+}
+
+#login_container {
+    width: 475px;
+    height: 190px;
+    background: url(../static/1.png) 0 -26px;
+    border: 1px #fff solid;
+    margin: 0 auto
+}
+
+#login_left {
+    float: left;
+    width: 110px;
+    height: 150px
+}
+
+#login_right {
+    float: left;
+    height: 150px;
+    width: 365px
+}
+
+#login_bottom {
+    float: left;
+    height: 40px;
+    width: 475px
+}
+
+#login_title {
+    font-size: 14pt;
+    font-weight: bold;
+    height: 20px;
+    padding: 10px 0 20px 15px
+}
+
+#login_forgot {
+    padding-top: 20px;
+    font-size: 8pt;
+    height: 20px;
+    width: 275px;
+    text-align: right
+}
+
+.login_label {
+    font-weight: bold;
+    float: left;
+    text-align: right;
+    width: 80px;
+    height: 30px;
+    line-height: 25px
+}
+
+.login_field {
+    float: left;
+    padding-left: 15px;
+    width: 270px;
+    height: 30px
+}
+
+.login_text {
+    width: 175px
+}
+
+.login_register {
+    float: left;
+    display: block;
+    width: 182px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    background: url(../static/big_button_icons.png) 0 0;
+    margin-left: 10px
+}
+
+.login_register:hover {
+    color: #fff;
+    background: url(../static/big_button_icons.png) 0 -26px
+}
+
+.login_bottom_gap {
+    float: left;
+    width: 100px;
+    height: 26px
+}
+
+.login_button {
+    color: #fff;
+    font-size: 12px;
+    border: 0;
+    margin-left: 10px;
+    font-weight: bold;
+    float: left;
+    display: block;
+    background: url(../static/button_icons.png) 0 -26px;
+    width: 71px;
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    cursor: pointer
+}
+
+.login_button:hover {
+    color: #fff;
+    background: url(../static/button_icons.png) 0 0
+}
+
+.font8 {
+    font-size: 8pt
+}
+
+.font12 {
+    font-size: 12pt
+}
+
+.bold {
+    font-weight: bold
+}
+
+.right {
+    text-align: right
+}
+
+.border {
+    border: 1px solid #fff
+}
+
+.heading {
+    font-weight: bold;
+    padding-bottom: 5px
+}
+
+.text_block {
+    padding: 0 0 10px 10px
+}
+
+.green {
+    color: #3c3
+}
+
+.red {
+    color: red
+}
+
+.yellow {
+    color: #fff000
+}
+
+.clear {
+    clear: both
+}
+
+.float_left {
+    float: left
+}
+
+.float_right {
+    float: right
+}

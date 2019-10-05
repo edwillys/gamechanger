@@ -30,7 +30,7 @@
         'read_midi_out_slot': { req: 0x08, res: 0x88, lenRes: 4 },
         'write_midi_out_slot': { req: 0xFF, res: 0xFF, lenRes: 0 },
         'write_audition_sync': { req: 0x15, res: 0x95, lenRes: 0 },
-        'write_audition': { req: 0xFF, res: 0xFF, lenRes: 0 }
+        'write_audition': { req: 0xFF, res: 0xFF, lenRes: 0 } // TODO
     }
 
     var usbGCReceive = function (dataBuf) {
@@ -93,13 +93,16 @@
             if (usbReady) {
                 if (msgId in usbGCProtocol) {
                     var req = [usbGCProtocol[msgId].req];
-                    var buf = Buffer.allocUnsafe(96)
+                    var buf = Buffer.allocUnsafe(128)
                     buf[0] = req;
                     for (let i = 0; i < payload.length; i++) {
                         buf[1 + i] = payload[i];
                     }
+                    gc.log.event('USB data sent', buf);
                     outEndpoint.transfer(buf, function (err) {
-                        console.log("USB transfer error:" + err);
+                        if ( err ){
+                            console.log("USB transfer error:" + err);
+                        }
                     });
                 } else {
                     console.log("Message not found in USBGC protocol: " + msgId);

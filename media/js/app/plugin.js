@@ -663,9 +663,11 @@
             var el = catcher.p_id.find(function (item) {
                 return parseInt(item.preset_id) == p.id;
             });
-            el.preset_code = p.code;
-            el.name = p.name;
-            el.note = p.note;
+            if (el){
+                el.preset_code = p.code;
+                el.name = p.name;
+                el.note = p.note;
+            }
             send_data_to_usb("write_audition", p);
         },
 

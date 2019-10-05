@@ -1,3 +1,10 @@
+# VS code folder
+.vscode/
+.vs/
+
+# Electron package
+**/package-lock.json
+
 # Logs
 logs
 *.log

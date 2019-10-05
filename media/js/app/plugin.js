@@ -945,6 +945,11 @@
                 events.set_midi_scheme_id(gc.hexstr2int(msg.data, 0), gc.hexstr2int(msg.data, 8))
                 if (MidiInPointer < instrument_behavior.max_midi_in) {
                     send_data_to_usb('read_midi_in_slot', [MidiInPointer]);
+                } else if (MidiOutPointer < instrument_behavior.max_midi_out) { 
+                    send_data_to_usb('read_midi_out_slot', [MidiInPointer]);
+                } else {
+                    gc.log.read('Nothing to load on MIDI');
+                    send_data_to_usb('read_battery');
                 }
             }
             else if (msg.command == 'read_midi_in_slot') {

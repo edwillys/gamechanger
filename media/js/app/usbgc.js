@@ -60,9 +60,12 @@
             usbHandler = usb.findByIds(USB_VENDOR_GC, USB_PRODUCT_GC);
             // open USB handler
             usbHandler.open();
-            // detach any kernel driver, if active
-            if (usbHandler.interfaces[0].isKernelDriverActive()) {
-                usbHandler.interfaces[0].detachKernelDriver();
+            // Do not call kernel driver functionality when running on win32 : https://github.com/tessel/node-usb/pull/227
+            if (process.platform !== "win32"){
+                // detach any kernel driver, if active
+                if (usbHandler.interfaces[0].isKernelDriverActive()) {
+                    usbHandler.interfaces[0].detachKernelDriver();
+                }
             }
             // claim interfaces
             usbHandler.interfaces[0].claim();

@@ -15,16 +15,25 @@ Most of the code was taken from the web application and a big part of the effort
 
 ## Installation
 
-In order to install and run this application you will need npm. It should be cross platform, though most of the tests are being done under Linux and some tests on Windows. Almost no tests were done on Mac.
+In order to install and run this application you will need npm. On Linux npm should already be installed by default. On Windows you can download it on the official web page https://nodejs.org/en/download/. Make sure you have it added to your path. This application should be cross platform, though most of the tests are being done under Linux, some tests on Windows and almost no tests were done on Mac.
 
 ### Install the app
+
+Open the terminal or command shell on the folder you checked out this repository and run:
 ```
 npm install
 ```
 
 ### Build the node-usb
+
+Linux
 ```
-./node_modules/.bin/electron.rebuild
+./node_modules/.bin/electron-rebuild
+```
+
+Windows:
+```
+node_modules/.bin/electron-rebuild.cmd
 ```
 
 ### Give permission to access Game Changer USB device (Linux)

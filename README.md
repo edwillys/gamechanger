@@ -89,17 +89,19 @@ A big part of the effort was to understand how the USB communication protocol wo
 
 The payload for coil wiring has 16 bytes and is explained below. Each 2 letters represent a byte:
 
-1st word: BB ?? ?? ?? C1 C1 C2 C2 
+1st word: BB ?? ?? ?? C1 C1 C2 C2
+
 2nd word: C3 C3 C4 C4 C5 C5 ?? ??
 
 BB is the byte mask for which coil is active. Combinations are achieved via OR:
-coil 1 -> 0x01
-coil 2 -> 0x02
-coil 3 -> 0x04
-coil 4 -> 0x08
-coil 5 -> 0x10
-Piezo  -> 0x40
-Mute   -> 0x80
+
+- coil 1 -> 0x01
+- coil 2 -> 0x02
+- coil 3 -> 0x04
+- coil 4 -> 0x08
+- coil 5 -> 0x10
+- Piezo  -> 0x40
+- Mute   -> 0x80
 
 The HH and HHP guitars have 4 coils, the latter having the piezo as well. The HSH and HSHP have 5 coils, the latter having the piezo too. They coils are numbered in ascending order, the bridge being the first and the neck being the last one. Humbuckers count obviously for 2 coils.
 
@@ -130,28 +132,38 @@ Below are examples of valid series connections for a 6 string guitar:
 
 - coil 1 in phase in series from ground to string 1, 
   coil 2 in phase in series from string 1 to string 6
+
 0: "0300000000111263"
+
 1: "ffffffffffffffff"
 
 - coil 1 in phase in series from ground to string 2, 
   coil 2 in phase in series from string s to string 6
+
 0: "0300000000212263"
+
 1: "ffffffffffffffff"
 
 - coil 1 out of phase phase in series from ground to string 1, 
   coil 2 in phase in series from string 1 to string 6
+
 0: "0300000010011263"
+
 1: "ffffffffffffffff"
 
 - coil 1 in phase in series from ground to string 2, 
   coil 2 out of phase in series from string s to string 6
+
 0: "0300000000216223"
+
 1: "ffffffffffffffff"
 
 - coil 1 in phase in series from ground to string 1, 
   coil 2 in phase in series from string 1 to string 2, 
   coil 3 in phase in series from string 2 to string 6
+
 0: "0700000000111223"
+
 1: "2465ffffffffffff"
 
 - coil 1 in phase in series from ground to string 2, 
@@ -159,7 +171,9 @@ Below are examples of valid series connections for a 6 string guitar:
   (in parallel with)
   coil 5 in phase in series from ground to string 2, 
   coil 4 out of phase in series from string 2 to string 6, 
+
 0: "1b00000000212263"
+
 1: "ffff68290a2bffff"
 
 ## Disclaimer

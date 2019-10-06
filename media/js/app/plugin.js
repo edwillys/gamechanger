@@ -668,7 +668,15 @@
                 el.name = p.name;
                 el.note = p.note;
             }
-            send_data_to_usb("write_audition", p);
+            // currently only preset ID of 1 byte supported. Length is 4 bytes though
+            var header = p.id.toString(16); 
+            if( header.length <= 2){
+                header = "0".repeat(2 - header.length) + header + "000000";
+                send_data_to_usb("write_audition", gc.hexstr2intarray(header + p.code));
+            } else {
+                console.log("ERROR: preset id larger than 1 byte not supported")
+            }
+            
         },
 
         open: function (file, store = true) {
@@ -769,25 +777,35 @@
                     return (a.length % 2 ? '0' + a : a);
                 },
 
-                str = pad(b.bankA_behavior) + pad(b.bankB_behavior) + pad(b.bankZ_behavior) + pad(b.bankZ_kickout) + pad(b.routing_mode) + pad(b.piezo_pot) + pad(b.piezo_button) + pad(b.max_midi_in) + pad(b.max_midi_out) + pad(b.midi_mode) + pad(b.max_bankz) + pad(b.bankZ_switch);
+                str = pad(b.bankA_behavior) + 
+                pad(b.bankB_behavior) + 
+                pad(b.bankZ_behavior) + 
+                pad(b.bankZ_kickout) +
+                pad(b.routing_mode) + 
+                pad(b.piezo_pot) + 
+                pad(b.piezo_button) + 
+                pad(b.max_midi_in) + 
+                pad(b.max_midi_out) + 
+                pad(b.midi_mode) + 
+                pad(b.max_bankz) + 
+                pad(b.bankZ_switch);
 
             return str;
         },
 
         sync: function () {
-            var p = plugin();
-
-            //    if ( p && device.dirty() )
-            //{
-            //p.mute_on();
-
             send_data_to_usb("mute_on_sync");
             gc.log.read('mute_on!');
             var mute = browser.ipreset(262);
-            //p.write_audition( mute.r, mute.code );
-
-            send_data_to_usb("write_audition_sync", mute);
-            gc.log.read('write_audition! mute ' + mute.r + 'mute code ' + mute.code);
+            // currently only preset ID of 1 byte supported. Length is 4 bytes though
+            var header = mute.id.toString(16); 
+            if( header.length <= 2){
+                header = "0".repeat(2 - header.length) + header + "000000";
+                send_data_to_usb("write_audition", gc.hexstr2intarray(header + mute.code));
+                gc.log.read('write_audition! mute ' + mute.r + 'mute code ' + mute.code);
+            } else {
+                console.log("ERROR: preset id larger than 1 byte not supported")
+            }
         },
 
         device_dirty: function () {
@@ -1005,7 +1023,6 @@
                     send_data_to_usb("write_midi_scheme_id", ids);
                 } else {
                     var data = device.data;
-                    //p.write_scheme_banks_id( data.r, data.banks[0].r, data.banks[1].r, data.banks[2].r );
                     var tempData = [
                         data.r,
                         data.banks[0].r,

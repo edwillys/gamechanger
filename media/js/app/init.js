@@ -374,6 +374,16 @@
                 return str;
             },
 
+            // hex string to int array
+            hexstr2intarray: function (s) {
+                var arr = [];
+
+                for (var i = 0; i < s.length; i += 2){
+                    arr.push(parseInt(s.substr(i,2), 16));
+                }
+                return arr;
+            },
+
             // hex string at index i to int
             hexstr2int: function (s, i) {
                 return parseInt(s.substr(i,2), 16);
@@ -410,10 +420,8 @@
                         ret += '' + v;
                     }
                 }
-
                 return ret;
             }
-
         });
 
 })(jQuery);

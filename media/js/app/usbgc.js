@@ -29,8 +29,9 @@
         'write_midi_in_slot': { req: 0xFF, res: 0xFF, lenRes: 0 },
         'read_midi_out_slot': { req: 0x08, res: 0x88, lenRes: 4 },
         'write_midi_out_slot': { req: 0xFF, res: 0xFF, lenRes: 0 },
-        'write_audition_sync': { req: 0x15, res: 0x95, lenRes: 0 },
-        'write_audition': { req: 0xFF, res: 0xFF, lenRes: 0 } // TODO
+        //'write_audition_sync': { req: 0x15, res: 0x95, lenRes: 0 },
+        'write_audition_sync': { req: 0xFF, res: 0xFF, lenRes: 0 }, // TODO
+        'write_audition': { req: 0x15, res: 0x95, lenRes: 0 } 
     }
 
     var usbGCReceive = function (dataBuf) {
@@ -98,7 +99,7 @@
                     var req = [usbGCProtocol[msgId].req];
                     // 0xFF are commands that still have missing IDs
                     if (req != 0xFF){
-                        var buf = Buffer.allocUnsafe(96)
+                        var buf = Buffer.allocUnsafe(64)
                         buf[0] = req;
                         for (let i = 0; i < payload.length; i++) {
                             buf[1 + i] = payload[i];

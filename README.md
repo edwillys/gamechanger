@@ -17,6 +17,12 @@ Most of the code was taken from the web application and a big part of the effort
 
 In order to install and run this application you will need npm. It should be cross platform, though most of the tests are being done under Linux and some tests on Windows. Almost no tests were done on Mac.
 
+### Checkout or download this repo
+```
+git checkout https://github.com/edwillys/gamechanger
+cd gamechanger
+```
+
 ### Install the app
 ```
 npm install

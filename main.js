@@ -184,7 +184,7 @@ function orderAndSave(file, json) {
             let options  = {
                 type : "error",
                 buttons: ["Ok"],
-                message: "An error ocurred creating the file " + err.message
+                message: "An error occurred creating the file " + err.message
             }
             dialog.showMessageBox(options);
         } else {

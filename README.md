@@ -1,25 +1,27 @@
 # The Game Changer 
 Electron port to Ernie Ball's Game Changer web application 
 
+![Alt text](screenshot.png)
+
 ## Introduction
-This is an attempt of making an Electron port of Ernie Ball's Game Changer web application. The main goal is to create a simple desktop application that allows for communicating with the Game Changer guitar/bass without the need of internet connection. The original app can be found here:
+This is an attempt of making an Electron port of Ernie Ball's Game Changer web application. The main goal is to create a simple desktop application that allows for communicating with the Game Changer guitar/bass without the need for an internet connection. The original app can be found here:
 
 http://gamechanger.music-man.com/app.eb
 
-Most of the code was taken from the web application and a big part of the effort was concentrated into adaptin it into the Electron environment. The interface is very similar to th original application, though here are some notable differences:
+Most of the code was taken from the web application and a big part of the effort was concentrated on adapting it to the Electron environment. The interface is very similar to the original application, though there are some notable differences:
 
-* No external plugin is necessary for the USB communication. node-usb library should take care of this
-* The interface related to user account was left out, as the intention is to make it a simple desktop app.
-* No internet connection needed for interfacing with your Game Changer guitar/bass
-* Some simple file handling was implemented for saving and opening your presets
+* No external plugin is necessary for USB communication. node-usb library should take care of this
+* The interface related to the user account was left out, as the intention is to make it a simple desktop app.
+* No internet connection is needed for interfacing with your Game Changer guitar/bass
+* Some simple file handling was implemented for saving and opening presets
 
 ## Installation
 
-In order to install and run this application you will need npm. On Linux npm should already be installed by default. On Windows you can download it on the official web page https://nodejs.org/en/download/. Make sure you have it added to your path. This application should be cross platform, though most of the tests are being done under Linux, some tests on Windows and almost no tests were done on Mac.
+In order to install and run this application you will need npm. On Linux npm should already be installed by default. On Windows, you can download it on the official web page https://nodejs.org/en/download/. Make sure you have it added to your path. This application should be cross-platform, though most of the tests are being done under Linux, some tests on Windows and almost no tests were done on Mac.
 
-### Checkout or download this repo
+### Clone or download this repo
 ```
-git checkout https://github.com/edwillys/gamechanger
+git clone https://github.com/edwillys/gamechanger
 cd gamechanger
 ```
 
@@ -63,7 +65,7 @@ npm start
 
 ## USB communication
 
-A big part of the effort was to understand how the USB communication protocol works. The game changer intruments use USB URB (request block) protocol.It mainly works via a request-response mechanism, with the first byte being the command or the command response. The following bytes, if any, are the payload and depend on the command. I try to sum up with the command description below. please note that there might be errors or innacurrate information.
+A big part of the effort was to understand how the USB communication protocol works. The game changer instruments use USB URB (request block) protocol. It mainly works via a request-response mechanism, with the first byte being the command or the command response. The following bytes, if any, are the payload and depend on the command. I try to sum it up in the command description below. please note that there might be errors or inaccurate information.
 
 | Request | Response | Description |
 | --- | --- | --- |
@@ -87,13 +89,13 @@ A big part of the effort was to understand how the USB communication protocol wo
 
 ## Coil Wiring 
 
-The payload for coil wiring has 16 bytes and is explained below. Each 2 letters represent a byte:
+The payload for coil wiring has 16 bytes. Every 2 letters represent a byte:
 
 1st word: BB ?? ?? ?? C1 C1 C2 C2
 
 2nd word: C3 C3 C4 C4 C5 C5 ?? ??
 
-BB is the byte mask for which coil is active. Combinations are achieved via OR:
+BB is the byte mask, indicating which coil is active. Combinations are achieved via OR:
 
 - coil 1 -> 0x01
 - coil 2 -> 0x02
@@ -103,32 +105,32 @@ BB is the byte mask for which coil is active. Combinations are achieved via OR:
 - Piezo  -> 0x40
 - Mute   -> 0x80
 
-The HH and HHP guitars have 4 coils, the latter having the piezo as well. The HSH and HSHP have 5 coils, the latter having the piezo too. They coils are numbered in ascending order, the bridge being the first and the neck being the last one. Humbuckers count obviously for 2 coils.
+The HH and HHP guitars have 4 coils, the latter having the piezo as well. The HSH and HSHP have 5 coils, the latter having the piezo too. The coils are numbered in ascending order, the bridge being the first and the neck being the last one. Humbuckers count obviously for 2 coils.
 
 Each coil has 4 nibbles for setup and they are split as follows:
 
 BYTE0 BYTE1
 N0_N1 N2_N3
 
-N0 and N2 are points where the coils are connected. They go from 0 (ground) to number of string (6 in the case of guitar).
+N0 and N2 are points where the coils are connected. They go from 0 (ground) to the number of strings (6 in the case of a guitar).
 If a coil is in phase, the connection goes from N0 (lower) to N2. If it is out of phase, it goes from N2 (lower) to N0 (higher).
-Assuming the case of a 6 string guitar, we have the following examples:
+Assuming the case of a 6-string guitar, we have the following examples:
 
-- coil in phase and in parallel: N0 = 0 (ground) N2 = 6 (last string)
-- coil out of phase and in parallel: N0 = 6 (last string) N2 = 0 (ground)
-- coil in phase and in series from string 1 to string 4: N0 = 1 (lower E string)  N2 = 4 (G string)
-- coil out phase and in series from string 3 to string 5: N0 = 5 (B string) N2 = 3 (D string)
+- coil in phase and in parallel: N0 = 0 (ground) N2 = 6 (last string).
+- coil out of phase and in parallel: N0 = 6 (last string) N2 = 0 (ground).
+- coil in phase and in series from string 1 to string 4: N0 = 1 (lower E string)  N2 = 4 (G string).
+- coil out phase and in series from string 3 to string 5: N0 = 5 (B string) N2 = 3 (D string).
 
-Also note that in order for a coil configuration to be valid, we need to make sure that the connections in series are well formed, that is, that they form a closed path. 
+Also note that, in order for a coil configuration to be valid, we need to make sure that the connections in series are well formed, that is, that they form a closed path. 
 
-The nibbles N1 and N3 seem to have hardcoded values for each coil. Current investigations leads to following values:
+The nibbles N1 and N3 seem to have hardcoded values for each coil. Current investigations lead to the following values:
 - if coil 1 active: N1 = 0x0, N3 = 0x1
 - if coil 2 active: N1 = 0x2, N3 = 0x3
 - if coil 3 active: N1 = 0x4, N3 = 0x5
 - if coil 4 active: N1 = 0x8, N3 = 0x9
 - if coil 5 active: N1 = 0xA, N3 = 0xB
 
-Below are examples of valid series connections for a 6 string guitar:
+Below are examples of valid series connections for a 6-string guitar:
 
 - coil 1 in phase in series from ground to string 1, 
   coil 2 in phase in series from string 1 to string 6
@@ -144,7 +146,7 @@ Below are examples of valid series connections for a 6 string guitar:
 
 1: "ffffffffffffffff"
 
-- coil 1 out of phase phase in series from ground to string 1, 
+- coil 1 out of phase in series from ground to string 1, 
   coil 2 in phase in series from string 1 to string 6
 
 0: "0300000010011263"
@@ -178,12 +180,12 @@ Below are examples of valid series connections for a 6 string guitar:
 
 ## Disclaimer
 
-I do not own the original code, nor was I part of its development, so this software is to be used "as is". I am also not responsible for any damage that this software might cause to your instrument. This code is under MIT license and is free to be shared, used and improved by anyone.
+I do not own the original code, nor was I part of its development, so this software is to be used "as is". I am also not responsible for any damage that this software might cause to your instrument. This code is licensed under the MIT license and is free to be shared, used and improved by anyone.
 
 ## TODOs
-Currently lots of :) Here are the first ones that come to mind:
-- Manage dirty flag when saving, opening and plugging the instrumenr
-- Warnings for overwrite on read from instrument or connect
+Currently lots of them :) Here are the first ones that come to mind:
+- Manage dirty flag when saving, opening and plugging the instrument
+- Warnings for configuration overwrite upon reading from the instrument or connecting
 - undo/redo
 - Instrument/PC data set sync
 - Logo

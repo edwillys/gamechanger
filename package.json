@@ -15,8 +15,9 @@
   "author": "Edgar Lubicz",
   "license": "MIT",
   "dependencies": {
-    "electron": "^11.5.0",
     "@electron/rebuild": "^3.2.10",
+    "electron": "^11.5.0",
+    "node-hid": "^2.2.0",
     "usb": "^2.6.0"
   }
 }

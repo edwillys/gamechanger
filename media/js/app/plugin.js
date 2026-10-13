@@ -76,6 +76,15 @@
             usbgc.send(command, id);
         },
 
+        //send a write_audition request: preset id as 4 bytes little endian, followed by the coil config
+        send_audition_to_usb = function (id, code) {
+            var header = "";
+            for (var i = 0; i < 4; i++) {
+                header += ("0" + ((id >> (8 * i)) & 0xff).toString(16)).slice(-2);
+            }
+            send_data_to_usb("write_audition", gc.hexstr2intarray(header + code));
+        },
+
         addEvent = function (name, func) {
             if (window.addEventListener) {
                 plugin().addEventListener(name, func, false);
@@ -668,15 +677,8 @@
                 el.name = p.name;
                 el.note = p.note;
             }
-            // currently only preset ID of 1 byte supported. Length is 4 bytes though
-            var header = p.id.toString(16); 
-            if( header.length <= 2){
-                header = "0".repeat(2 - header.length) + header + "000000";
-                send_data_to_usb("write_audition", gc.hexstr2intarray(header + p.code));
-            } else {
-                console.log("ERROR: preset id larger than 1 byte not supported")
-            }
-            
+            send_audition_to_usb(p.id, p.code);
+
         },
 
         open: function (file, store = true) {
@@ -797,15 +799,8 @@
             send_data_to_usb("mute_on_sync");
             gc.log.read('mute_on!');
             var mute = browser.ipreset(262);
-            // currently only preset ID of 1 byte supported. Length is 4 bytes though
-            var header = mute.id.toString(16); 
-            if( header.length <= 2){
-                header = "0".repeat(2 - header.length) + header + "000000";
-                send_data_to_usb("write_audition", gc.hexstr2intarray(header + mute.code));
-                gc.log.read('write_audition! mute ' + mute.r + 'mute code ' + mute.code);
-            } else {
-                console.log("ERROR: preset id larger than 1 byte not supported")
-            }
+            send_audition_to_usb(mute.id, mute.code);
+            gc.log.read('write_audition! mute ' + mute.r + 'mute code ' + mute.code);
         },
 
         device_dirty: function () {

@@ -44,6 +44,10 @@ Windows:
 node_modules/.bin/electron-rebuild.cmd
 ```
 
+### macOS
+
+No extra steps and no `sudo` needed: `npm install` is enough. macOS owns the guitar's HID interface, so on macOS the app talks to it through [node-hid](https://github.com/node-hid/node-hid) instead of node-usb (which is still used to detect plugging/unplugging). If macOS asks for "Input Monitoring" permission, allow it.
+
 ### Give permission to access Game Changer USB device (Linux)
 Create a .rules file in /etc/udev/rules.d (for example gamechanger.rules) containing the following line:
 

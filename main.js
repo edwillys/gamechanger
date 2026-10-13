@@ -41,15 +41,14 @@ const template = [
                             filters: [
                                 { name: 'JSON', extensions: ['json'] }
                             ]
-                        },
-                        function (file) {
-                            if (file) {
-                                mainWindow.webContents.send('open', file[0]);
-                                //var currTitle = mainWindow.getTitle();
-                                //mainWindow.setTitle(currTitle.split(' - ')[0] + ' - ' + file);
-                            }
                         }
-                    )
+                    ).then(function (result) {
+                        if (!result.canceled && result.filePaths.length > 0) {
+                            mainWindow.webContents.send('open', result.filePaths[0]);
+                            //var currTitle = mainWindow.getTitle();
+                            //mainWindow.setTitle(currTitle.split(' - ')[0] + ' - ' + file);
+                        }
+                    })
                 }
             },
             {
@@ -69,13 +68,12 @@ const template = [
                                     filters: [
                                         { name: 'JSON', extensions: ['json'] }
                                     ],
-                                },
-                                function (file) {
-                                    if (file) {
-                                        orderAndSave(file, currJson);
-                                    }
                                 }
-                            )
+                            ).then(function (result) {
+                                if (!result.canceled && result.filePath) {
+                                    orderAndSave(result.filePath, currJson);
+                                }
+                            })
                         }
                     })
                 }
@@ -91,16 +89,15 @@ const template = [
                             filters: [
                                 { name: 'JSON', extensions: ['json'] }
                             ],
-                        },
-                        function (file) {
-                            if (file) {
-                                mainWindow.webContents.send('saveas');
-                                ipcMain.once('saveas-reply', (event, currJson) => {
-                                    orderAndSave(file, currJson);
-                                })
-                            }
                         }
-                    )
+                    ).then(function (result) {
+                        if (!result.canceled && result.filePath) {
+                            mainWindow.webContents.send('saveas');
+                            ipcMain.once('saveas-reply', (event, currJson) => {
+                                orderAndSave(result.filePath, currJson);
+                            })
+                        }
+                    })
                 }
             },
             isMac ? { role: 'close' } : { role: 'quit' }

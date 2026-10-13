@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "rebuild": "electron-rebuild -f -w usb"
+    "rebuild": "electron-rebuild -f -w usb",
+    "package": "scripts/package-mac.sh"
   },
   "keywords": [
     "gamechanger",

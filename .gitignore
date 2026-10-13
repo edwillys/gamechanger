@@ -69,3 +69,6 @@ typings/
 
 # backup files
 *.bak
+
+# packaged macOS app (npm run package)
+dist/

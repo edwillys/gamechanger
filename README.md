@@ -44,6 +44,12 @@ Windows:
 node_modules/.bin/electron-rebuild.cmd
 ```
 
+### macOS
+
+No extra steps and no `sudo` needed: `npm install` is enough. macOS owns the guitar's HID interface, so on macOS the app talks to it through [node-hid](https://github.com/node-hid/node-hid) instead of node-usb (which is still used to detect plugging/unplugging). If macOS asks for "Input Monitoring" permission, allow it.
+
+To build a standalone app for your Mac, run `npm run package`. It creates `dist/The Game Changer-darwin-<arch>/The Game Changer.app` (the architecture is the one of the Mac you build on, because the native modules are installed for it). The app is signed ad hoc only: it opens without any fuss on the Mac that built it, but a copy downloaded to another Mac has to be opened with right-click > Open the first time.
+
 ### Give permission to access Game Changer USB device (Linux)
 Create a .rules file in /etc/udev/rules.d (for example gamechanger.rules) containing the following line:
 

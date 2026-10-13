@@ -1,10 +1,17 @@
 (function ($) {
 
     const usb = require('usb')
+    // usb >= 2.0 moved the event emitter and LIBUSB_* constants to usb.usb
+    const usbCore = usb.usb || usb
     const USB_VENDOR_GC = 9086
     const USB_PRODUCT_GC = 1
+    // The Game Changer is a HID device. macOS owns HID interfaces, so libusb cannot claim them
+    // (LIBUSB_ERROR_ACCESS); on macOS the I/O goes through node-hid instead. libusb is still
+    // used there for attach/detach events.
+    const HID = process.platform === 'darwin' ? require('node-hid') : null
 
     let usbHandler = null, outEndpoint = null, inEndpoint = null, usbReady = false;
+    let hidDevice = null;
     var gc = window.gc;
     var plugin = gc.plugin;
     var usbgc = gc.usbgc;
@@ -55,24 +62,58 @@
         }
     }
 
+    var initHid = function () {
+        var info = HID.devices(USB_VENDOR_GC, USB_PRODUCT_GC)[0];
+        if (!info) {
+            throw new Error('Game Changer not found on HID (vendor ' + USB_VENDOR_GC + ', product ' + USB_PRODUCT_GC + ')');
+        }
+        try {
+            hidDevice = new HID.HID(info.path);
+        } catch (error) {
+            throw new Error('HID open failed: ' + error.message);
+        }
+        hidDevice.on('data', function (dataBuf) {
+            usbGCReceive(dataBuf)
+        });
+        hidDevice.on('error', function (error) {
+            console.log('Error at HID receive:' + error);
+        });
+        usbReady = true;
+    }
+
     $.extend(usbgc, {
         init: function () {
+            if (HID) {
+                return initHid();
+            }
             // find correct usb handler
             usbHandler = usb.findByIds(USB_VENDOR_GC, USB_PRODUCT_GC);
+            if (!usbHandler) {
+                throw new Error('Game Changer not found on USB (vendor ' + USB_VENDOR_GC + ', product ' + USB_PRODUCT_GC + ')');
+            }
             // open USB handler
-            usbHandler.open();
-            // Do not call kernel driver functionality when running on win32 : https://github.com/tessel/node-usb/pull/227
-            if (process.platform !== "win32"){
+            try {
+                usbHandler.open();
+            } catch (error) {
+                throw new Error('open failed: ' + error.message);
+            }
+            // Kernel driver detaching is Linux-only: unsupported by libusb on darwin and win32
+            // (https://github.com/tessel/node-usb/pull/227)
+            if (process.platform === "linux"){
                 // detach any kernel driver, if active
                 if (usbHandler.interfaces[0].isKernelDriverActive()) {
                     usbHandler.interfaces[0].detachKernelDriver();
                 }
             }
             // claim interfaces
-            usbHandler.interfaces[0].claim();
+            try {
+                usbHandler.interfaces[0].claim();
+            } catch (error) {
+                throw new Error('claim interface failed: ' + error.message);
+            }
             // when new data comes in a data event will be fired on the receive endpoint
             inEndpoint = usbHandler.interfaces[0].endpoints[0];
-            inEndpoint.transferType = usb.LIBUSB_TRANSFER_TYPE_INTERRUPT;
+            inEndpoint.transferType = usbCore.LIBUSB_TRANSFER_TYPE_INTERRUPT;
             // 128 seems to be a must, but the 3...
             inEndpoint.startPoll(3, 128);
             inEndpoint.on("data", function (dataBuf) {
@@ -105,11 +146,20 @@
                             buf[1 + i] = payload[i];
                         }
                         gc.log.event('USB data sent', buf);
-                        outEndpoint.transfer(buf, function (err) {
-                            if ( err ){
-                                console.log("USB transfer error:" + err);
+                        if (hidDevice) {
+                            // node-hid expects the report id (0: device uses none) in front of the 64 data bytes
+                            try {
+                                hidDevice.write([0].concat(Array.from(buf)));
+                            } catch (err) {
+                                console.log("HID write error:" + err);
                             }
-                        });
+                        } else {
+                            outEndpoint.transfer(buf, function (err) {
+                                if ( err ){
+                                    console.log("USB transfer error:" + err);
+                                }
+                            });
+                        }
                     }
                 } else {
                     console.log("Message not found in USBGC protocol: " + msgId);
@@ -122,20 +172,29 @@
 
     // In this file you can include the rest of your app's specific main process
     // code. You can also put them in separate files and require them here.
-    usb.on('attach', function (device) {
+    usbCore.on('attach', function (device) {
         if (device.deviceDescriptor.idVendor == USB_VENDOR_GC &&
             device.deviceDescriptor.idProduct == USB_PRODUCT_GC) {
             console.log("GC attached");
-            try {
-                usbgc.init();
-                plugin.convey_message('device_connected');
-            } catch (error) {
-                console.log("Error at USB init on attaching:" + error)
-            }
+            // on macOS the HID device can show up a moment after the USB attach event
+            var attempts = HID ? 5 : 1;
+            var tryInit = function () {
+                try {
+                    usbgc.init();
+                    plugin.convey_message('device_connected');
+                } catch (error) {
+                    if (--attempts > 0) {
+                        setTimeout(tryInit, 400);
+                    } else {
+                        console.log("Error at USB init on attaching:" + error)
+                    }
+                }
+            };
+            tryInit();
         }
     });
 
-    usb.on('detach', function (device) {
+    usbCore.on('detach', function (device) {
         if (usbReady &&
             device.deviceDescriptor.idVendor == USB_VENDOR_GC &&
             device.deviceDescriptor.idProduct == USB_PRODUCT_GC) {
@@ -145,7 +204,12 @@
             inEndpoint = null;
             outEndpoint = null;
             try {
-                usbHandler.close();    
+                if (hidDevice) {
+                    hidDevice.close();
+                    hidDevice = null;
+                } else {
+                    usbHandler.close();
+                }
             } catch (error) {
                 console.log("Failed to close USB: " + error)
             }

@@ -76,6 +76,95 @@
             usbgc.send(command, id);
         },
 
+        //send a write_audition request: preset id as 4 bytes little endian, followed by the coil config
+        send_audition_to_usb = function (id, code) {
+            var header = "";
+            for (var i = 0; i < 4; i++) {
+                header += ("0" + ((id >> (8 * i)) & 0xff).toString(16)).slice(-2);
+            }
+            send_data_to_usb("write_audition", gc.hexstr2intarray(header + code));
+        },
+
+        // integer as little endian byte array of the given length
+        le_bytes = function (n, len) {
+            var bytes = [];
+            for (var i = 0; i < len; i++) {
+                bytes.push((n >> (8 * i)) & 0xff);
+            }
+            return bytes;
+        },
+
+        // sync state: set by plugin.sync(), the write chain only runs while it is set
+        syncing = false,
+        sync_timer = null,
+        sync_stop = function () {
+            syncing = false;
+            clearTimeout(sync_timer);
+        },
+        // abort and unmute if the guitar stops acknowledging, instead of leaving it stuck in audition mute
+        sync_arm_watchdog = function () {
+            clearTimeout(sync_timer);
+            sync_timer = setTimeout(function () {
+                console.log("ERROR: no acknowledgement from the instrument during sync, aborting");
+                syncing = false;
+                send_data_to_usb('mute_off');
+            }, 3000);
+        },
+
+        // everything is written: unmute and update the UI state
+        sync_finish = function () {
+            sync_stop();
+            send_data_to_usb('mute_off');
+            gc.log.read('mute_off!');
+
+            read_complete();
+            gc.log.read('read_complete!');
+
+            $.colorbox.close();
+
+            device.dirty_config = false;
+            // MIDI changes are not written by the write chain, keep them marked as pending
+            device.dirty_data = false;
+            //alert("Users may have to cycle power on the instrument in order for settings to take effect.");
+
+            visual.update();
+        },
+
+        // raw scheme/banks data as read from the instrument (hex string, 16 bytes)
+        scheme_banks_raw = null,
+
+        // scheme and banks ids are four 4 byte fields: the id in the first byte, followed by 3 bytes of
+        // unknown meaning (bank Z has been seen with 0x03 there). Those are kept as read, only the ids are replaced.
+        send_scheme_banks_id_to_usb = function () {
+            var data = device.data,
+                ids = [data.r, data.banks[0].r, data.banks[1].r, data.banks[2].r];
+            if (!scheme_banks_raw || scheme_banks_raw.length != 32 || ids.some(function (id) { return !(id >= 0 && id <= 255); })) {
+                console.log("ERROR: cannot write scheme/banks ids (no raw data read from the instrument or id > 255), aborting sync");
+                sync_stop();
+                send_data_to_usb('mute_off');
+                return false;
+            }
+            var payload = gc.hexstr2intarray(scheme_banks_raw);
+            for (var i = 0; i < ids.length; i++) {
+                payload[4 * i] = ids[i];
+            }
+            send_data_to_usb("write_scheme_banks_id", payload);
+            gc.log.read('write_scheme_banks_id! ' + ids.join(' '));
+            return true;
+        },
+
+        // slots are numbered 1 to 25 (A: 1-5, B: 6-10, Z: 11-25); the id is 2 bytes little endian
+        send_preset_id_to_usb = function (slot, preset) {
+            send_data_to_usb("write_preset_id", [slot].concat(le_bytes(preset.r, 2)));
+            gc.log.read('write_preset_id! slot=' + slot + ' id=' + preset.r);
+        },
+
+        // the preset config is 16 bytes; codes read from the instrument carry one extra trailing byte
+        send_preset_to_usb = function (slot, preset) {
+            send_data_to_usb("write_preset", [slot].concat(gc.hexstr2intarray(preset.code.substr(0, 32))));
+            gc.log.read('write_preset! slot=' + slot + ' code=' + preset.code.substr(0, 32));
+        },
+
         addEvent = function (name, func) {
             if (window.addEventListener) {
                 plugin().addEventListener(name, func, false);
@@ -668,15 +757,8 @@
                 el.name = p.name;
                 el.note = p.note;
             }
-            // currently only preset ID of 1 byte supported. Length is 4 bytes though
-            var header = p.id.toString(16); 
-            if( header.length <= 2){
-                header = "0".repeat(2 - header.length) + header + "000000";
-                send_data_to_usb("write_audition", gc.hexstr2intarray(header + p.code));
-            } else {
-                console.log("ERROR: preset id larger than 1 byte not supported")
-            }
-            
+            send_audition_to_usb(p.id, p.code);
+
         },
 
         open: function (file, store = true) {
@@ -794,18 +876,12 @@
         },
 
         sync: function () {
-            send_data_to_usb("mute_on_sync");
-            gc.log.read('mute_on!');
+            // the audition write mutes the instrument; its acknowledgement starts the write chain
+            syncing = true;
+            sync_arm_watchdog();
             var mute = browser.ipreset(262);
-            // currently only preset ID of 1 byte supported. Length is 4 bytes though
-            var header = mute.id.toString(16); 
-            if( header.length <= 2){
-                header = "0".repeat(2 - header.length) + header + "000000";
-                send_data_to_usb("write_audition", gc.hexstr2intarray(header + mute.code));
-                gc.log.read('write_audition! mute ' + mute.r + 'mute code ' + mute.code);
-            } else {
-                console.log("ERROR: preset id larger than 1 byte not supported")
-            }
+            send_audition_to_usb(mute.id, mute.code);
+            gc.log.read('write_audition! mute ' + mute.r + 'mute code ' + mute.code);
         },
 
         device_dirty: function () {
@@ -917,6 +993,7 @@
                 send_data_to_usb('read_scheme_banks_id');
             }
             else if (msg.command == 'read_scheme_banks_id') {
+                scheme_banks_raw = msg.data;
                 events.set_scheme_banks_id(gc.hexstr2int(msg.data, 0),
                     gc.hexstr2int(msg.data, 8),
                     gc.hexstr2int(msg.data, 16),
@@ -1010,28 +1087,13 @@
                 gc.log.read('READ IS COMPLETED!');
                 read_complete();
             }
-            else if (msg.command == 'mute_on_sync') {
-                read_complete();
-            }
-            else if (msg.command == 'write_audition_sync') {
-                if (device.dirty_midi) {
-                    var data = midi.data;
-                    var ids = [
-                        data.id_in,
-                        data.id_out
-                    ]
-                    send_data_to_usb("write_midi_scheme_id", ids);
-                } else {
-                    var data = device.data;
-                    var tempData = [
-                        data.r,
-                        data.banks[0].r,
-                        data.banks[1].r,
-                        data.banks[2].r
-                    ];
-                    send_data_to_usb("write_scheme_banks_id", tempData);
-                    gc.log.read('write_scheme_banks_id!  ' + data.r + ' ' + data.banks[0].r + '   ' +
-                        data.banks[1].r + '  ' + data.banks[2].r);
+            else if (msg.command == 'write_audition') {
+                // the instrument is muted now: write the data. Auditions sent while previewing
+                // presets are acknowledged the same way, so only continue during a sync
+                if (syncing) {
+                    sync_arm_watchdog();
+                    // MIDI writes have no known command bytes yet, so MIDI changes are not written here
+                    send_scheme_banks_id_to_usb();
                 }
             }
             else if (msg.command == 'write_midi_scheme_id') {
@@ -1097,33 +1159,30 @@
                 }
             }
             else if (msg.command == 'write_scheme_banks_id') {
-                RealPresetId = 0;
-                PresetPointer = 0;
-                BankPointer = 0;
-                var preset = device.data.banks[BankPointer].presets[RealPresetId];
-
-                //p.write_preset_id(0, i, preset.r);
-                var tempData = [
-                    PresetPointer + 1,
-                    preset.r
-                ];
-                send_data_to_usb("write_preset_id", tempData);
-                gc.log.read('bank A write_preset_id! id=  ' + preset.r);
-                //p.write_preset(0, i, preset.code);
+                if (syncing) {
+                    sync_arm_watchdog();
+                    RealPresetId = 0;
+                    PresetPointer = 0;
+                    BankPointer = 0;
+                    send_preset_id_to_usb(PresetPointer + 1, device.data.banks[BankPointer].presets[RealPresetId]);
+                }
             }
             else if (msg.command == 'write_preset_id') {
-                if (PresetPointer < 25) {
-                    var preset = device.data.banks[BankPointer].presets[RealPresetId];
-                    var tempData = [
-                        PresetPointer + 1,
-                        preset.code
-                    ];
-                    send_data_to_usb("write_preset", tempData);
-                    gc.log.read('bank A write_preset! id=' + RealPresetId + ' code= ' + preset.code);
+                if (syncing && PresetPointer < 25) {
+                    sync_arm_watchdog();
+                    send_preset_to_usb(PresetPointer + 1, device.data.banks[BankPointer].presets[RealPresetId]);
+                }
+            }
+            else if (msg.command == 'write_instrument_behavior') {
+                if (syncing) {
+                    sync_finish();
                 }
             }
             else if (msg.command == 'write_preset') {
-                console.log('plugin done writing preset');
+                if (!syncing) {
+                    return;
+                }
+                sync_arm_watchdog();
                 PresetPointer++;
                 RealPresetId++;
                 if (PresetPointer > 4 && PresetPointer < 10) {
@@ -1135,44 +1194,13 @@
                     RealPresetId = PresetPointer - 10;
                 }
                 if (PresetPointer < 25) {
-                    var preset = device.data.banks[BankPointer].presets[RealPresetId];
-                    var tempData = [
-                        PresetPointer + 1,
-                        preset.r
-                    ];
-                    send_data_to_usb("write_preset_id", tempData);
-                    gc.log.read('bank A write_preset! id=' + i + ' code= ' + preset.code);
+                    send_preset_id_to_usb(PresetPointer + 1, device.data.banks[BankPointer].presets[RealPresetId]);
+                } else if (device.dirty_config) {
+                    // the settings are only written when they were changed; sync_finish() follows their acknowledgement
+                    send_data_to_usb("write_instrument_behavior", gc.hexstr2intarray(plugin.behavior()));
+                    gc.log.read('write_instrument_behavior! ' + plugin.behavior());
                 } else {
-                    //if ( device.dirty_config )
-                    //{
-                    var tempData = [
-                        plugin.behavior()
-                    ];
-                    send_data_to_usb("write_instrument_behavior", tempData);
-                    //p.write_instrument_behavior( plugin.behavior() );
-                    gc.log.read('write_instrument_behavior!' + plugin.behavior());
-                    //}
-
-                    // p.write_user_id( 0 );
-
-                    //p.mute_off();
-                    send_data_to_usb("mute_off_sync");
-                    gc.log.read('mute_off!');
-                    //    if ( device.dirty() )
-                    //        read_all();
-
-                    read_complete();
-                    gc.log.read('read_complete!');
-                    // debug.log( "BANKZ_SWITCH:" + instrument_behavior.max_bankz, zs1 );
-
-                    $.colorbox.close();
-
-                    device.dirty_config = false;
-                    device.dirty_midi = false;
-                    device.dirty_data = false;
-                    //alert("Users may have to cycle power on the instrument in order for settings to take effect.");
-
-                    visual.update();
+                    sync_finish();
                 }
             }
         }
